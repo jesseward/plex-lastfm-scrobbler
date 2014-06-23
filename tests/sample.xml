@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaContainer size="1" allowSync="1" identifier="com.plexapp.plugins.library" librarySectionID="3" librarySectionTitle="Audio" librarySectionUUID="c0e24573-9325-4519-bc78-cd11f2cfc299" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1365388102">
+<Track ratingKey="26866" key="/library/metadata/26866" parentRatingKey="26859" grandparentRatingKey="26858" guid="local://26859/7" type="track" title="I&apos;m Amazed" grandparentKey="/library/metadata/26858" parentKey="/library/metadata/26859" grandparentTitle="My Morning Jacket" parentTitle="2008-06-13 / Bonnaroo Music Festival" summary="" index="7" parentIndex="1" art="/library/metadata/26858/art/1403351593" grandparentThumb="/library/metadata/26858/thumb/1403351593" duration="319895" addedAt="1403337462" updatedAt="1403351603">
+<Media id="21845" duration="319895" bitrate="183" audioChannels="2" audioCodec="mp3" container="mp3">
+<Part id="21911" key="/library/parts/21911/file.mp3" duration="319895" file="/mnt/media/Audio/Rock/Albums/H_to_Q/My_Morning_Jacket-2008-06-13_-_Bonnaroo_Music_Festival-2008-jW/07-My_Morning_Jacket-Im_Amazed-jW.mp3" size="7339638" container="mp3">
+<Stream id="35361" streamType="2" selected="1" codec="mp3" index="0" channels="2" bitrate="183" bitrateMode="vbr" duration="319895" samplingRate="44100" title="" />
+</Part>
+</Media>
+</Track>
+</MediaContainer>
