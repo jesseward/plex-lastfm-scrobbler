@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import re
 import socket
 import urllib2
@@ -10,10 +9,7 @@ import shelve
 
 from lastfm import scrobble
 
-logger = logging.getLogger(__name__)
-logging.basicConfig()
 
-LOG_FILE = ''
 PHT_URL = 'http://localhost:32400'
 LOG_FILE = '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log'
 
@@ -21,19 +17,21 @@ LOG_FILE = '/var/lib/plexmediaserver/Library/Application Support/Plex Media Serv
 class ScrobbleCache(object):
 
     def __init__(self, conf='/tmp/cache'):
+
         self.conf = conf
         self.cache = shelve.open(self.conf, writeback=True)
+        self.logger = logging.getLogger(__name__)
 
     def add(self, key, value):
 
-        logger.info('adding \'{key}\' \'{value}\' to retry cache.'.format(
+        self.logger.info('adding \'{key}\' \'{value}\' to retry cache.'.format(
             key=key, value=value))
 
         self.cache[key] = value
 
     def remove(self, key):
 
-        logger.info('removing \'{key}\' \'{value}\' to retry cache.'.format(
+        self.logger.info('removing \'{key}\' \'{value}\' to retry cache.'.format(
             key=key, value=value))
         del self.cache[key]
 
@@ -53,6 +51,7 @@ class ScrobbleCache(object):
 def parse_line(l):
     ''' Matches based on a "got played" PHT audio media object.  '''
 
+    logger = logging.getLogger(__name__)
     logger.debug('Parsing log line : {log}'.format(log=l))
 
     played = re.compile(r".*\sDEBUG\s-\sLibrary\sitem\s(\d+)\s'.*'\sgot\splayed\sby\saccount.*")
@@ -66,6 +65,7 @@ def parse_line(l):
 def fetch_metadata(id):
     ''' retrieves the metadata information from the PHT api. '''
 
+    logger = logging.getLogger(__name__)
     url = '{url}/library/metadata/{id}'.format(url=PHT_URL, id=id)
     logger.info('fetching metadata from {url}'.format(url=url))
 
@@ -93,7 +93,9 @@ def fetch_metadata(id):
     return {'track': song, 'artist': artist}
 
 
-if __name__ == '__main__':
+def monitor_log():
+
+    logger = logging.getLogger(__name__)
 
     f = open(LOG_FILE)
     f.seek(0, 2)
@@ -106,6 +108,7 @@ if __name__ == '__main__':
         # id and send it off to last.fm for scrobble.
         if line:
             played = parse_line(line)
+            print line
 
             if not played: continue
 
@@ -120,3 +123,7 @@ if __name__ == '__main__':
                 cache = ScrobbleCache()
                 cache.add({time: [metadata['artist'], metadata['track']]})
                 cache.close
+
+if __name__ == '__main__': 
+    logger = logging.getLogger(__name__)
+    m = monitor_log()
