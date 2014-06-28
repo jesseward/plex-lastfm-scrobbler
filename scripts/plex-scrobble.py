@@ -1,12 +1,8 @@
 import threading
 import logging
 
-from plex_monitor import monitor_log, ScrobbleCache
+from plex_scrobble.plex_monitor import monitor_log, ScrobbleCache
 
-FORMAT = '%(asctime)-15s %(message)s'
-logging.basicConfig(format=FORMAT)
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
 def cache_retry():
 
@@ -22,4 +18,9 @@ def main():
     log_watch.start()
 
 if __name__ == '__main__':
+
+    FORMAT = '%(asctime)-15s %(levelname)s %(message)s'
+    logging.basicConfig(format=FORMAT)
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
     m = main()
