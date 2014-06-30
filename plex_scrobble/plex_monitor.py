@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import logging
 import shelve
 
-from lastfm import scrobble
+from lastfm import LastFm
 
 
 PHT_URL = 'http://localhost:32400'
@@ -43,9 +43,13 @@ class ScrobbleCache(object):
 
     def retry_queue(self):
 
+        lastfm = LastFM('blah')
         for key in self.cache:
             # do submissions retry
-            scrobble(artist, album)
+            try:
+                lastfm.scrobble(artist, album)
+            except:
+                continue
 
 
 def parse_line(l):
@@ -117,7 +121,8 @@ def monitor_log():
             if not metadata: continue
 
             # submit to last.fm
-            a = scrobble(metadata['artist'], metadata['track'])
+            lastfm = LastFm('test')
+            a = lastfm.scrobble(metadata['artist'], metadata['track'])
 
             if not a:
                 cache = ScrobbleCache()
