@@ -6,13 +6,14 @@ import time
 import xml.etree.ElementTree as ET
 import logging
 import shelve
+import time
 
 from lastfm import LastFm
 
 
 PHT_URL = 'http://localhost:32400'
 LOG_FILE = '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log'
-
+MAX_CACHE_AGE = 5
 
 class ScrobbleCache(object):
 
@@ -22,33 +23,44 @@ class ScrobbleCache(object):
         self.cache = shelve.open(self.conf, writeback=True)
         self.logger = logging.getLogger(__name__)
 
-    def add(self, key, value):
+    def add(self, key, value, cache_hit=1):
 
         self.logger.info('adding \'{key}\' \'{value}\' to retry cache.'.format(
             key=key, value=value))
 
-        self.cache[key] = value
+        self.cache[str(time.time())] = [key, value, cache_hit]
+        self.cache.sync()
 
     def remove(self, key):
 
-        self.logger.info('removing \'{key}\' \'{value}\' to retry cache.'.format(
-            key=key, value=value))
+        self.logger.info('removing \'{key}\': \'{artist}\' - \'{track}\' from retry cache.'.format(
+            key=key, artist=self.cache[key][0], track=self.cache[key][1]))
         del self.cache[key]
+        self.cache.sync()
 
     def close(self):
         self.cache.close()
 
     def items(self):
-        for key in self.cache: print self.cache[key]
+        for key in self.cache: 
+            print '{key} : {artist} - {track}'.format(key=key,
+                artist=self.cache[key][0], track=self.cache[key][1])
 
     def retry_queue(self):
 
-        lastfm = LastFM('blah')
+        lastfm = LastFM('TODO: cfg object')
+
         for key in self.cache:
             # do submissions retry
             try:
-                lastfm.scrobble(artist, album)
+                lastfm.scrobble(self.cache[key][0], self.cache[key][1])
+                self.cache[key][2] += 1  
             except:
+                # remove this record from retry cache, if we're at the retry limit
+                if self.cache[key][2] >= MAX_CACHE_AGE: 
+                    logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
+                        key, self.cache[key][0], self.key[1]))
+                    self.remove(key)
                 continue
 
 
