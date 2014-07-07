@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import re
+import os
 import socket
 import urllib2
 import time
@@ -68,22 +69,21 @@ def parse_line(l):
     ''' Matches based on a "got played" PHT audio media object.  '''
 
     logger = logging.getLogger(__name__)
-    logger.debug('Parsing log line : {log}'.format(log=l))
 
     played = re.compile(r".*\sDEBUG\s-\sLibrary\sitem\s(\d+)\s'.*'\sgot\splayed\sby\saccount.*")
     m = played.match(l)
 
     if m:
-        logger.info('extracted media id \'{id}\''.format(id=m.group(1)))
+        logger.info('Found played song and extracted library id \'{l_id}\' from plex log '.format(l_id=m.group(1)))
         return m.group(1)
 
 
-def fetch_metadata(id):
+def fetch_metadata(l_id):
     ''' retrieves the metadata information from the PHT api. '''
 
     logger = logging.getLogger(__name__)
-    url = '{url}/library/metadata/{id}'.format(url=PHT_URL, id=id)
-    logger.info('fetching metadata from {url}'.format(url=url))
+    url = '{url}/library/metadata/{l_id}'.format(url=PHT_URL, l_id=l_id)
+    logger.info('Fetching library metadata from {url}'.format(url=url))
 
     # fail if request is greater than 2 seconds.
     try:
@@ -98,12 +98,18 @@ def fetch_metadata(id):
 
     tree = ET.fromstring(metadata.read())
     track = tree.find('Track')
-    artist = track.get('grandparentTitle')
+
+    # if present use originalTitle. This appears to be set if
+    # the album is various artist 
+    artist = track.get('originalTitle')
+    if not artist:
+        artist = track.get('grandparentTitle')
+
     song = track.get('title')
 
     if not all((artist, song)):
-        logger.warn('unable to retrieve meatadata keys track={track}, artist={artist}'.
-                format(track=track, artist=artist))
+        logger.warn('unable to retrieve meatadata keys for libary-id={l_id}'.
+                format(l_id=l_id))
         return False
 
     return {'track': song, 'artist': artist}
@@ -115,7 +121,18 @@ def monitor_log():
 
     f = open(LOG_FILE)
     f.seek(0, 2)
+
     while True:
+
+        # reset our file handle in the event the log file was not written to
+        # within the last 60 seconds. This is a very crude attempt to support
+        # the log file i/o rotation detection cross-platform.
+        if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60 :
+            logger.debug('Possible log file rotation, resetting file handle')
+            f.close()
+            f = open(LOG_FILE)
+            f.seek(0, 2)
+
         time.sleep(.05)
         line = f.readline()
 
@@ -124,7 +141,6 @@ def monitor_log():
         # id and send it off to last.fm for scrobble.
         if line:
             played = parse_line(line)
-            print line
 
             if not played: continue
 

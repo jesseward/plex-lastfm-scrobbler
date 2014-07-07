@@ -19,8 +19,7 @@ def main():
 
 if __name__ == '__main__':
 
-    FORMAT = '%(asctime)-15s %(levelname)s %(message)s'
-    logging.basicConfig(format=FORMAT)
+    FORMAT = '%(asctime)-15s [%(process)d] [%(name)s %(funcName)s] [%(levelname)s] %(message)s'
+    logging.basicConfig(format=FORMAT, level=logging.DEBUG)
     logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
     m = main()
