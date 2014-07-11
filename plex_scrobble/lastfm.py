@@ -143,7 +143,7 @@ class LastFm(object):
         token = self._get_auth_token()
         accepted = 'n'
 
-        print 'Please accept authorizated at http://www.last.fm/api/auth/?api_key={key}&token={token}'.format(
+        print 'Please accept authorization at http://www.last.fm/api/auth/?api_key={key}&token={token}'.format(
                 key=self.key, token=token)
         while accepted.lower() == 'n':
             print
