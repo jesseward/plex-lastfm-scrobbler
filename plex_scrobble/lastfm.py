@@ -24,14 +24,14 @@ class LastFm(object):
 
     def get_session(self):
 
-        if os.path.exists(os.path.expanduser('~/.lastfmsess')):
-            sessfp = open(os.path.expanduser('~/.lastfmsess'), 'r')
+        if os.path.exists(self.cfg.get('plex-scrobble', 'session')):
+            sessfp = open(self.cfg.get('plex-scrobble', 'session'), 'r')
             session = sessfp.read().strip()
             sessfp.close()
         return session
 
 
-    def _htmlentitydecode(s):
+    def _htmlentitydecode(self, s):
         os = re.sub('&(%s);' % '|'.join(name2codepoint),
             lambda m: unichr(name2codepoint[m.group(1)]), s)
         return os
@@ -144,7 +144,7 @@ class LastFm(object):
         accepted = 'n'
 
         print 'Please accept authorizated at http://www.last.fm/api/auth/?api_key={key}&token={token}'.format(
-                key=key, token=token)
+                key=self.key, token=token)
         while accepted.lower() == 'n':
             print
             accepted = raw_input('Have you authorized me [y/N] :')
@@ -156,7 +156,7 @@ class LastFm(object):
             self.logger.error('Unable to send authorization request {error}'.format(error=e))
             return False
 
-        fp = open(os.path.expanduser('~/.lastfmsess'), 'w')
+        fp = open(self.cfg.get('plex-scrobble', 'session'), 'w')
         fp.write(key)
         fp.close()
         self.logger.info('Last.FM authorization successful.')

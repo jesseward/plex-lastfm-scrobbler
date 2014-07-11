@@ -11,9 +11,6 @@ import time
 
 from lastfm import LastFm
 
-
-PHT_URL = 'http://localhost:32400'
-LOG_FILE = '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log'
 MAX_CACHE_AGE = 5
 
 class ScrobbleCache(object):
@@ -49,7 +46,7 @@ class ScrobbleCache(object):
 
     def retry_queue(self):
 
-        lastfm = LastFM('TODO: cfg object')
+        lastfm = LastFM(config)
 
         for key in self.cache:
             # do submissions retry
@@ -66,7 +63,7 @@ class ScrobbleCache(object):
 
 
 def parse_line(l):
-    ''' Matches based on a "got played" PHT audio media object.  '''
+    ''' Matches based on a "got played" plex media server audio media object.  '''
 
     logger = logging.getLogger(__name__)
 
@@ -78,11 +75,12 @@ def parse_line(l):
         return m.group(1)
 
 
-def fetch_metadata(l_id):
+def fetch_metadata(l_id, config):
     ''' retrieves the metadata information from the PHT api. '''
 
     logger = logging.getLogger(__name__)
-    url = '{url}/library/metadata/{l_id}'.format(url=PHT_URL, l_id=l_id)
+    url = '{url}/library/metadata/{l_id}'.format(url=config.get('plex-scrobble',
+      'mediaserver_url'), l_id=l_id)
     logger.info('Fetching library metadata from {url}'.format(url=url))
 
     # fail if request is greater than 2 seconds.
@@ -115,11 +113,16 @@ def fetch_metadata(l_id):
     return {'track': song, 'artist': artist}
 
 
-def monitor_log():
+def monitor_log(config):
 
     logger = logging.getLogger(__name__)
 
-    f = open(LOG_FILE)
+    try:
+        f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
+    except IOError:
+        logger.error('Unable to read log-file {0}. Shutting down.'.format(config.get(
+          'plex-scrobble', 'mediaserver_log_location')))
+        return
     f.seek(0, 2)
 
     while True:
@@ -130,7 +133,7 @@ def monitor_log():
         if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60 :
             logger.debug('Possible log file rotation, resetting file handle')
             f.close()
-            f = open(LOG_FILE)
+            f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
             f.seek(0, 2)
 
         time.sleep(.05)
@@ -144,19 +147,15 @@ def monitor_log():
 
             if not played: continue
 
-            metadata = fetch_metadata(played)
+            metadata = fetch_metadata(played, config)
 
             if not metadata: continue
 
             # submit to last.fm
-            lastfm = LastFm('test')
+            lastfm = LastFm(config)
             a = lastfm.scrobble(metadata['artist'], metadata['track'])
 
             if not a:
                 cache = ScrobbleCache()
                 cache.add({time: [metadata['artist'], metadata['track']]})
                 cache.close
-
-if __name__ == '__main__': 
-    logger = logging.getLogger(__name__)
-    m = monitor_log()
