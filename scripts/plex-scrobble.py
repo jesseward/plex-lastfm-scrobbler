@@ -30,7 +30,7 @@ if __name__ == '__main__':
         default=False, help='Generate a new last.fm session key.')
 
     p.set_defaults(config_file=os.path.expanduser(
-      '~/.config/plex-scrobble/plex_scrobble.conf'))
+      '~/.config/plex-lastfm-scrobbler/plex_scrobble.conf'))
 
     (options, args) = p.parse_args()
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     # apply defaults to *required* configuration values.
     config = ConfigParser.ConfigParser(defaults = {
-        'session': os.path.expanduser('~/.config/plex-scrobble/session_key'),
+        'session': os.path.expanduser('~/.config/plex-lastfm-scrobbler/session_key'),
         'mediaserver_url': 'http://localhost:32400',
         'log_file': '/tmp/plex_scrobble.log'
       })
