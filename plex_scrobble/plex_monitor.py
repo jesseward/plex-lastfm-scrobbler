@@ -129,7 +129,7 @@ def monitor_log(config):
 
     while True:
 
-        time.sleep(.05)
+        time.sleep(.03)
 
         # reset our file handle in the event the log file was not written to
         # within the last 60 seconds. This is a very crude attempt to support
