@@ -86,7 +86,11 @@ Please relaunch plex-scrobble service.
 
 ```
 
-Once this is complete, please re-start the service, listen to audio via Plex and watch as your music is scrobbled.
+Once this is complete, please re-start the service, listen to audio via Plex and watch as your music is scrobbled. You may wish to leave the service running in the background. On a POSIX system, wrap the script in the no-hangup utility.
+
+```
+$ nohup plex-scrobble.py &
+```
 
 Troubleshooting
 -------------
