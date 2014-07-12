@@ -116,6 +116,8 @@ def fetch_metadata(l_id, config):
 def monitor_log(config):
 
     logger = logging.getLogger(__name__)
+    st_mtime = False
+    last_played = None
 
     try:
         f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
@@ -127,16 +129,28 @@ def monitor_log(config):
 
     while True:
 
+        time.sleep(.05)
+
         # reset our file handle in the event the log file was not written to
         # within the last 60 seconds. This is a very crude attempt to support
         # the log file i/o rotation detection cross-platform.
         if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60 :
+
+            if int(os.fstat(f.fileno()).st_mtime) == st_mtime: continue
+
             logger.debug('Possible log file rotation, resetting file handle')
             f.close()
-            f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
-            f.seek(0, 2)
 
-        time.sleep(.05)
+            try:
+                f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
+            except IOError:
+                logger.error('Unable to read log-file {0}. Shutting down.'.format(config.get(
+                  'plex-scrobble', 'mediaserver_log_location')))
+                return
+
+            f.seek(0, 2)
+            st_mtime = int(os.fstat(f.fileno()).st_mtime)
+
         line = f.readline()
 
         # read all new lines starting at the end. We attempt to match
@@ -146,6 +160,12 @@ def monitor_log(config):
             played = parse_line(line)
 
             if not played: continue
+
+            # when playing via a client, log lines are duplicated (seen via iOS)
+            # this skips dupes. Note: will also miss songs that have been repeated
+            if played == last_played:
+                logger.warn('Dupe detection : {0}, not submitting'.format(last_played))
+                continue
 
             metadata = fetch_metadata(played, config)
 
@@ -159,3 +179,5 @@ def monitor_log(config):
                 cache = ScrobbleCache()
                 cache.add({time: [metadata['artist'], metadata['track']]})
                 cache.close
+
+            last_played = played
