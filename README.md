@@ -9,7 +9,7 @@ A few points
   - Must be run on the Plex Media Server 
   - Parses Plex Media Server logs for the 'got played' string in the log file.
   - Does not differentiate between clients. Meaning all media played, will be scrobbled while the script is running.
-
+  - Your plex-media-server logs must be set at DEBUG level (not VERBOSE)
 
 Installation
 ----
