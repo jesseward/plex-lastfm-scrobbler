@@ -15,7 +15,7 @@ setup(
     scripts = ['scripts/plex-scrobble.py'],
     packages=['plex_scrobble'],
     data_files = [(
-      os.path.expanduser('~/.config/{0}/'.format(NAME)),
+      os.path.expanduser('~/.config/{0}'.format(NAME)),
       ['conf/plex_scrobble.conf'],
       )]
 )
