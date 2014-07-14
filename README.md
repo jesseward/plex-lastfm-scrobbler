@@ -5,8 +5,9 @@ plex-lastfm-scrobbler provides a set of scripts that allow you to scrobble playe
 
 A few points
 
-  - Uses python standard library. Python is the only requirement to run this application
+  - plex-lastfm-scrobbler is an out of process tool. Meaning it is not a Plex Media Server plug-in. This tool runs separately of your Plex Media Server.
   - Must be run on the Plex Media Server 
+  - Uses python standard library. Python is the only requirement to run this application
   - Parses Plex Media Server logs for the 'got played' string in the log file.
   - Does not differentiate between clients. Meaning all media played, will be scrobbled while the script is running.
   - Your plex-media-server logs must be set at DEBUG level (not VERBOSE)
