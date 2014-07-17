@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import sys
 import logging
@@ -9,13 +10,25 @@ from plex_scrobble.plex_monitor import monitor_log, ScrobbleCache
 
 
 def cache_retry(config):
+    '''Thread timer for the cache retry logic.
 
+    .. note::
+        not yet implemented.
+
+    Args:
+        config (ConfigParser obj) : user specific configuration params
+    '''
     threading.Timer(7200, cache_retry).start()
     cache = ScrobbleCache()
     cache.retry_queue()
     cache.close
 
 def main(config):
+    ''' The main thread loop
+
+    Args:
+        config (ConfigParser obj) : user specific configuration params
+    '''
 
     logger.info('starting log monitor thread.')
     log_watch = threading.Thread(target=monitor_log, args=(config,))
