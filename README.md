@@ -15,7 +15,7 @@ A few points
 Installation
 ----
 
-** Linux, OSX **
+**Linux, OSX**
 
 It is recommended (but not required) that you install this into a virtualenvironment. 
 
@@ -34,7 +34,7 @@ python setup.py install
 
 You're done.
 
-** Windows **
+**Windows**
 Note: any feedback regarding MS Windows functionality is appreciated.
 
 *  Download and install Python 2.7.x from https://www.python.org/download/ . Ensure you enable the option to install Python to the system/site path.
