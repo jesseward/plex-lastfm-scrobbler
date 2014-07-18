@@ -15,7 +15,7 @@ A few points
 Installation
 ----
 
-Version 0.0.1
+** Linux, OSX **
 
 It is recommended (but not required) that you install this into a virtualenvironment. 
 
@@ -34,6 +34,29 @@ python setup.py install
 
 You're done.
 
+** Windows **
+Note: any feedback regarding MS Windows functionality is appreciated.
+
+*  Download and install Python 2.7.x from https://www.python.org/download/ . Ensure you enable the option to install Python to the system/site path.
+*  Download the zip of plex-lastfm-scrobbler from https://github.com/jesseward/plex-lastfm-scrobbler/archive/master.zip .
+* unzip archive to a temporary location. for this example we will use c:\temp\plex-lastfm-scrobbler\
+* Open a command prompt and change to the \temp folder
+```
+cd c:\temp\plex-lastfm-scrobbler\
+```
+* in the c:\temp\plex-lastfm-scrobbler\ directory, run the installer from the dos prompt
+```
+python setup.py install
+```
+The above command installs the python scripts to various locations. Directories of interest are :
+* c:\Python27\scripts\
+* .config  - this directory is created in your Users home directory (http://en.wikipedia.org/wiki/Home_directory#Default_home_directory_per_operating_system). You will need to modify the configuration file from within this directory and point log locations at the appropriate locations for Plex on windows. You can set the "log_file" property to c:\temp or some other location which you wish to write logs to.
+ 
+To run the application, do the following from a DOS prompt
+```
+cd c:\Python27\scripts
+python plex-scrobble.py
+```
 
 Configuration
 -----------
