@@ -15,10 +15,10 @@ MAX_CACHE_AGE = 5
 
 class ScrobbleCache(object):
 
-    def __init__(self, conf='/tmp/cache'):
+    def __init__(self, config):
 
-        self.conf = conf
-        self.cache = shelve.open(self.conf, writeback=True)
+        self.config = config
+        self.cache = shelve.open(self.config.get('plex-scrobble', 'cache_location'), writeback=True)
         self.logger = logging.getLogger(__name__)
 
     def add(self, key, value, cache_hit=1):
@@ -39,28 +39,35 @@ class ScrobbleCache(object):
     def close(self):
         self.cache.close()
 
-    def items(self):
+    def cache_items(self):
         for key in self.cache: 
-            print '{key} : {artist} - {track}'.format(key=key,
-                artist=self.cache[key][0], track=self.cache[key][1])
+            print 'time={key}, artist={artist}, track={track},age={age}'.format(
+					key=key, artist=self.cache[key][0], track=self.cache[key][1],
+					age=self.cache[key][2])
 
     def retry_queue(self):
 
-        lastfm = LastFM(config)
+        a = True
+        lastfm = LastFm(self.config)
 
         for key in self.cache:
             # do submissions retry
             try:
-                lastfm.scrobble(self.cache[key][0], self.cache[key][1])
+                a = lastfm.scrobble(self.cache[key][0], self.cache[key][1])
                 self.cache[key][2] += 1  
             except:
+                pass
+
+            # if it was a failed submission
+            if not a:
                 # remove this record from retry cache, if we're at the retry limit
                 if self.cache[key][2] >= MAX_CACHE_AGE: 
                     logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
                         key, self.cache[key][0], self.key[1]))
                     self.remove(key)
-                continue
 
+            # successful send to last.fm, remove from cache
+            self.remove(key)
 
 def parse_line(l):
     ''' Matches based on a "got played" plex media server audio media object.  '''
@@ -175,9 +182,10 @@ def monitor_log(config):
             lastfm = LastFm(config)
             a = lastfm.scrobble(metadata['artist'], metadata['track'])
 
+            # scrobble was not successful , add to our retry queue   
             if not a:
                 cache = ScrobbleCache()
-                cache.add({time: [metadata['artist'], metadata['track']]})
+                cache.add(metadata['artist'], metadata['track'])
                 cache.close
 
             last_played = played
