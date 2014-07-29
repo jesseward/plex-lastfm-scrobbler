@@ -12,9 +12,6 @@ from plex_scrobble.plex_monitor import monitor_log, ScrobbleCache
 def cache_retry(config):
     '''Thread timer for the cache retry logic.
 
-    .. note::
-        not yet implemented.
-
     Args:
         config (ConfigParser obj) : user specific configuration params
     '''
