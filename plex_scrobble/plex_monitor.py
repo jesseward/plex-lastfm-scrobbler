@@ -11,7 +11,7 @@ import time
 
 from lastfm import LastFm
 
-MAX_CACHE_AGE = 5
+MAX_CACHE_AGE = 10
 
 class ScrobbleCache(object):
 
@@ -20,6 +20,9 @@ class ScrobbleCache(object):
         self.config = config
         self.cache = shelve.open(self.config.get('plex-scrobble', 'cache_location'), writeback=True)
         self.logger = logging.getLogger(__name__)
+
+    def length(self):
+        return len(self.cache)
 
     def add(self, key, value, cache_hit=1):
 
@@ -47,6 +50,7 @@ class ScrobbleCache(object):
 
     def retry_queue(self):
 
+        self.logger.info('Retrying scrobble cache.')
         a = True
         lastfm = LastFm(self.config)
 
@@ -62,12 +66,12 @@ class ScrobbleCache(object):
             if not a:
                 # remove this record from retry cache, if we're at the retry limit
                 if self.cache[key][2] >= MAX_CACHE_AGE: 
-                    logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
+                    self.logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
                         key, self.cache[key][0], self.key[1]))
                     self.remove(key)
-
-            # successful send to last.fm, remove from cache
-            self.remove(key)
+            else:
+                # successful send to last.fm, remove from cache
+                self.remove(key)
 
 def parse_line(l):
     ''' Matches based on a "got played" plex media server audio media object.  '''
@@ -184,7 +188,7 @@ def monitor_log(config):
 
             # scrobble was not successful , add to our retry queue   
             if not a:
-                cache = ScrobbleCache()
+                cache = ScrobbleCache(config)
                 cache.add(metadata['artist'], metadata['track'])
                 cache.close
 

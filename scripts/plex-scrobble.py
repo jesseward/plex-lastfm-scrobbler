@@ -18,10 +18,15 @@ def cache_retry(config):
     Args:
         config (ConfigParser obj) : user specific configuration params
     '''
-    threading.Timer(7200, cache_retry).start()
-    cache = ScrobbleCache()
-    cache.retry_queue()
-    cache.close
+    
+    cache = ScrobbleCache(config)
+    # do not retry if cache is empty.
+    if cache.length() > 0:
+        cache.retry_queue()
+
+    cache.close()
+    # retry cache every hour.
+    threading.Timer(3600, cache_retry, args=(config,)).start()
 
 def main(config):
     ''' The main thread loop
@@ -81,3 +86,4 @@ if __name__ == '__main__':
         sys.exit(0)
 
     m = main(config)
+    c = cache_retry(config)
