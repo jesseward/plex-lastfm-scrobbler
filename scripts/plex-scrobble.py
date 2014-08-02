@@ -5,8 +5,10 @@ import logging
 import threading
 import ConfigParser
 from optparse import OptionParser
+
 from plex_scrobble.lastfm import LastFm
-from plex_scrobble.plex_monitor import monitor_log, ScrobbleCache
+from plex_scrobble.plex_monitor import monitor_log
+from plex_scrobble.scrobble_cache import ScrobbleCache
 
 
 def cache_retry(config):
@@ -15,7 +17,8 @@ def cache_retry(config):
     Args:
         config (ConfigParser obj) : user specific configuration params
     '''
-    
+
+    logger.info('starting cache_retry thread.')
     cache = ScrobbleCache(config)
     # do not retry if cache is empty.
     if cache.length() > 0:

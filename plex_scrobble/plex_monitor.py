@@ -3,75 +3,13 @@ import re
 import os
 import socket
 import urllib2
-import time
 import xml.etree.ElementTree as ET
 import logging
-import shelve
 import time
 
 from lastfm import LastFm
+from scrobble_cache import ScrobbleCache
 
-MAX_CACHE_AGE = 10
-
-class ScrobbleCache(object):
-
-    def __init__(self, config):
-
-        self.config = config
-        self.cache = shelve.open(self.config.get('plex-scrobble', 'cache_location'), writeback=True)
-        self.logger = logging.getLogger(__name__)
-
-    def length(self):
-        return len(self.cache)
-
-    def add(self, key, value, cache_hit=1):
-
-        self.logger.info('adding \'{key}\' \'{value}\' to retry cache.'.format(
-            key=key, value=value))
-
-        self.cache[str(time.time())] = [key, value, cache_hit]
-        self.cache.sync()
-
-    def remove(self, key):
-
-        self.logger.info('removing \'{key}\': \'{artist}\' - \'{track}\' from retry cache.'.format(
-            key=key, artist=self.cache[key][0], track=self.cache[key][1]))
-        del self.cache[key]
-        self.cache.sync()
-
-    def close(self):
-        self.cache.close()
-
-    def cache_items(self):
-        for key in self.cache: 
-            print 'time={key}, artist={artist}, track={track},age={age}'.format(
-					key=key, artist=self.cache[key][0], track=self.cache[key][1],
-					age=self.cache[key][2])
-
-    def retry_queue(self):
-
-        self.logger.info('Retrying scrobble cache.')
-        a = True
-        lastfm = LastFm(self.config)
-
-        for key in self.cache:
-            # do submissions retry
-            try:
-                a = lastfm.scrobble(self.cache[key][0], self.cache[key][1])
-                self.cache[key][2] += 1  
-            except:
-                pass
-
-            # if it was a failed submission
-            if not a:
-                # remove this record from retry cache, if we're at the retry limit
-                if self.cache[key][2] >= MAX_CACHE_AGE: 
-                    self.logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
-                        key, self.cache[key][0], self.key[1]))
-                    self.remove(key)
-            else:
-                # successful send to last.fm, remove from cache
-                self.remove(key)
 
 def parse_line(l):
     ''' Matches based on a "got played" plex media server audio media object.  '''
@@ -87,7 +25,7 @@ def parse_line(l):
 
 
 def fetch_metadata(l_id, config):
-    ''' retrieves the metadata information from the PHT api. '''
+    ''' retrieves the metadata information from the Plex media Server api. '''
 
     logger = logging.getLogger(__name__)
     url = '{url}/library/metadata/{l_id}'.format(url=config.get('plex-scrobble',
@@ -109,7 +47,7 @@ def fetch_metadata(l_id, config):
     track = tree.find('Track')
 
     # if present use originalTitle. This appears to be set if
-    # the album is various artist 
+    # the album is various artist
     artist = track.get('originalTitle')
     if not artist:
         artist = track.get('grandparentTitle')
@@ -145,7 +83,7 @@ def monitor_log(config):
         # reset our file handle in the event the log file was not written to
         # within the last 60 seconds. This is a very crude attempt to support
         # the log file i/o rotation detection cross-platform.
-        if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60 :
+        if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60:
 
             if int(os.fstat(f.fileno()).st_mtime) == st_mtime: continue
 
@@ -186,7 +124,7 @@ def monitor_log(config):
             lastfm = LastFm(config)
             a = lastfm.scrobble(metadata['artist'], metadata['track'])
 
-            # scrobble was not successful , add to our retry queue   
+            # scrobble was not successful , add to our retry queue
             if not a:
                 cache = ScrobbleCache(config)
                 cache.add(metadata['artist'], metadata['track'])

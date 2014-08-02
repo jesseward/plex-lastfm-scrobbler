@@ -13,8 +13,8 @@ import os
 
 class LastFm(object):
 
-    key = 'e692f685cdb9434ade9e72307fe53b05'
-    secret = '7b42044139a817d6801e2da35943a0da'
+    KEY = 'e692f685cdb9434ade9e72307fe53b05'
+    SECRET = '7b42044139a817d6801e2da35943a0da'
     USER_AGENT = 'plex-lastfm-scrobbler'
 
     def __init__(self, cfg):
@@ -87,7 +87,7 @@ class LastFm(object):
 
         args = {
             'method': method,
-            'api_key': self.key,
+            'api_key': self.KEY,
             }
         for k, v in kwargs.items():
             args[k] = v.encode('utf8')
@@ -95,7 +95,7 @@ class LastFm(object):
         s = ''
         for k in sorted(args.keys()):
             s+=k+args[k]
-        s+=self.secret
+        s+=self.SECRET
 
         if 'sk' in args.keys() or 'token' in args.keys():
             args['api_sig'] = hashlib.md5(s).hexdigest()
@@ -144,7 +144,7 @@ class LastFm(object):
         accepted = 'n'
 
         print 'Please accept authorization at http://www.last.fm/api/auth/?api_key={key}&token={token}'.format(
-                key=self.key, token=token)
+                key=self.KEY, token=token)
         while accepted.lower() == 'n':
             print
             accepted = raw_input('Have you authorized me [y/N] :')
