@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+import platform
 import logging
 import threading
 import ConfigParser
@@ -9,6 +10,21 @@ from optparse import OptionParser
 from plex_scrobble.lastfm import LastFm
 from plex_scrobble.plex_monitor import monitor_log
 from plex_scrobble.scrobble_cache import ScrobbleCache
+
+def platform_log_directory():
+    ''' Retrieves the default platform specific default log location.
+        This is called if the user does not specify a log location in
+        the configuration file.
+        github issue https://github.com/jesseward/plex-lastfm-scrobbler/issues/5
+    '''
+
+    LOG_DEFAULTS = {
+        'Darwin': os.path.expanduser('~/Library/Logs/Plex Media Server.log'),
+        'Linux': '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log',
+        'Windows': os.path.join(os.environ.get('LOCALAPPDATA', 'c:'), 'Plex Media Server/Logs/Plex Media Server.log'),
+        }
+
+    return LOG_DEFAULTS[platform.system()]
 
 
 def cache_retry(config):
@@ -61,6 +77,7 @@ if __name__ == '__main__':
     config = ConfigParser.ConfigParser(defaults = {
         'session': os.path.expanduser('~/.config/plex-lastfm-scrobbler/session_key'),
         'mediaserver_url': 'http://localhost:32400',
+        'mediaserver_log_location': platform_log_directory(),
         'log_file': '/tmp/plex_scrobble.log'
       })
     config.read(options.config_file)
