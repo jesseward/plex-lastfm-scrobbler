@@ -46,6 +46,12 @@ def fetch_metadata(l_id, config):
     tree = ET.fromstring(metadata.read())
     track = tree.find('Track')
 
+    # BUG: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
+    if track is None: 
+        logger.info('Ignoring played item library-id={l_id}, could not determine audio library information.'.
+                format(l_id=l_id))
+        return False
+
     # if present use originalTitle. This appears to be set if
     # the album is various artist
     artist = track.get('originalTitle')
