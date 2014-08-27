@@ -26,7 +26,7 @@ source ~/.virtualenvs/plex-lastfm-scrobber/bin/activate
 
 Fetch and install the source from the github repo.
 ```
-git clone git@github.com:jesseward/plex-lastfm-scrobbler.git
+git clone https://github.com/jesseward/plex-lastfm-scrobbler.git
 cd plex-lastfm-scrobbler
 python setup.py install
 
