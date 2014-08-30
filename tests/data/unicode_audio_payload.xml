@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaContainer size="1" allowSync="1" identifier="com.plexapp.plugins.library" librarySectionID="3" librarySectionTitle="Audio" librarySectionUUID="c0e24573-9325-4519-bc78-cd11f2cfc299" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1365388102">
+<Track ratingKey="34444" key="/library/metadata/34444" parentRatingKey="39913" grandparentRatingKey="32454" guid="com.plexapp.agents.lastfm://Bj%C3%B6rk/Homogenic/2?lang=en" type="track" title="Jóga" grandparentKey="/library/metadata/32454" parentKey="/library/metadata/39913" grandparentTitle="Björk" parentTitle="Homogenic" summary="" index="2" parentIndex="1" viewOffset="100704" viewCount="3" lastViewedAt="1409368716" thumb="/library/metadata/39913/thumb/1403345864" art="/library/metadata/32454/art/1403345851" parentThumb="/library/metadata/39913/thumb/1403345864" grandparentThumb="/library/metadata/32454/thumb/1403345851" duration="305684" addedAt="1403341253" updatedAt="1403345862">
+<Media id="28661" duration="305684" bitrate="242" audioChannels="2" audioCodec="mp3" container="mp3">
+<Part id="28727" key="/library/parts/28727/file.mp3" duration="305684" file="/mnt/media/Audio/Rock/Albums/A_to_G/Bjrk-Homogenic-(TPLP71CD)-1997-jW/02-Bjrk-Jga.mp3" size="9253927" container="mp3">
+<Stream id="36446" streamType="2" selected="1" codec="mp3" index="0" channels="2" bitrate="242" bitrateMode="vbr" duration="305684" samplingRate="44100" title="" />
+</Part>
+</Media>
+</Track>
+</MediaContainer>

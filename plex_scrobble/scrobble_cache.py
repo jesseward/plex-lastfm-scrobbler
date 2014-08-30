@@ -30,7 +30,7 @@ class ScrobbleCache(object):
     def remove(self, key):
         ''' remove an existing entry from cache file. '''
 
-        self.logger.info('removing \'{key}\': \'{artist}\' - \'{track}\' from retry cache.'.format(
+        self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' from retry cache.'.format(
             key=key, artist=self.cache[key][0], track=self.cache[key][1]))
         del self.cache[key]
         self.cache.sync()
@@ -66,7 +66,7 @@ class ScrobbleCache(object):
             if not a:
                 # remove this record from retry cache, if we're at the retry limit
                 if self.cache[key][2] >= MAX_CACHE_AGE:
-                    self.logger.info('MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
+                    self.logger.info(u'MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
                         key, self.cache[key][0], self.key[1]))
                     self.remove(key)
             else:

@@ -125,7 +125,7 @@ class LastFm(object):
         session = self.get_session()
         ts = '%d' % (time.time() - 100)
 
-        self.logger.info('submitting {artist} - {track} to last.fm.'.format(
+        self.logger.info(u'submitting {artist} - {track} to last.fm.'.format(
                 artist=artist, track=track))
 
         try:
