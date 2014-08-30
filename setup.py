@@ -2,11 +2,11 @@ import os
 from distutils.core import setup
 
 NAME = 'plex-lastfm-scrobbler'
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 setup(
     name = 'plex_scrobble',
-    version = '0.0.1',
+    version = VERSION,
     author = 'Jesse Ward',
     author_email = 'jesse@jesseward.com',
     description = ('Scrobble audio tracks played via Plex Media Center'),
