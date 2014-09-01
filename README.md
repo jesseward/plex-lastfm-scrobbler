@@ -32,6 +32,15 @@ python setup.py install
 
 ```
 
+Alternatively, you can fetch the latest zip from github
+
+```
+wget https://github.com/jesseward/plex-lastfm-scrobbler/archive/master.zip
+unzip master.zip
+cd plex-lastfm-scrobbler-master
+python setup.py install
+```
+
 You're done.
 
 **Windows**
