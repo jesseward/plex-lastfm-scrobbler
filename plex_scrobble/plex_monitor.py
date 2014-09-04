@@ -11,17 +11,29 @@ from lastfm import LastFm
 from scrobble_cache import ScrobbleCache
 
 
-def parse_line(l):
-    ''' Matches based on a "got played" plex media server audio media object.  '''
+def parse_line(log_line):
+    ''' Matches known audio metadata log entries entries against input (log_line)
+    
+        :param log_line: plex media server log line
+        :type log_line: string
+        :returns: plex media server  metadata id
+        :rtype: integer (or None) '''
 
     logger = logging.getLogger(__name__)
 
-    played = re.compile(r".*\sDEBUG\s-\sLibrary\sitem\s(\d+)\s'.*'\sgot\splayed\sby\saccount.*")
-    m = played.match(l)
+    REGEX = [
+        # universal-transcoder
+        re.compile('.*GET\s\/music\/:\/transcode\/universal\/start\.mp3.*metadata%2F(\d+)\&.*'),
+        # stream based transcoder 
+        re.compile('.*\sDEBUG\s-\sLibrary\sitem\s(\d+)\s\'.*\'\sgot\splayed\sby\saccount.*')
+    ]
 
-    if m:
-        logger.info('Found played song and extracted library id \'{l_id}\' from plex log '.format(l_id=m.group(1)))
-        return m.group(1)
+    for regex in REGEX:
+        m = regex.match(log_line)
+
+        if m:
+            logger.info('Found played song and extracted library id \'{l_id}\' from plex log '.format(l_id=m.group(1)))
+            return m.group(1)
 
 
 def fetch_metadata(l_id, config):
