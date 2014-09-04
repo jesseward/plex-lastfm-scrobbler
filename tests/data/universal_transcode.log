@@ -1,0 +1,1394 @@
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60279] GET /music/:/transcode/universal/start.mp3?path=http%3A%2F%2F127.0.0.1%3A32400%2Flibrary%2Fmetadata%2F14755&mediaIndex=0&partIndex=0&maxAudioBitrate=350&protocol=http&session=lsd2u3agdjrcz0k9&offset=0&X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:23:29 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60278] GET /playQueues/6 (6 live)
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * path => http://127.0.0.1:32400/library/metadata/14755
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * mediaIndex => 0
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * partIndex => 0
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * maxAudioBitrate => 350
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * protocol => http
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * session => lsd2u3agdjrcz0k9
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * offset => 0
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG - Using profile Web
+Sep 02, 2014 19:23:29 [0x7fa5c0ff9700] DEBUG - PlayQueue: total generated: 20354, before cursor: 0, after cursor: 99
+Sep 02, 2014 19:23:29 [0x7fa5c0ff9700] DEBUG - PlayQueue: No need to refresh, active window is operational.
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG - Downloading document http://127.0.0.1:32400/library/metadata/14755
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG - Item required media analysis, performing on-the-fly analysis.
+Sep 02, 2014 19:23:29 [0x7fa5bb7fe700] DEBUG - Job running: /apps/plexmediaserver/Binaries/Plex Media Scanner --analyze --item 14755 
+Sep 02, 2014 19:23:29 [0x7fa5c0ff9700] DEBUG - It took 0.020000 sec to serialize a list with 21 elements.
+Sep 02, 2014 19:23:29 [0x7fa5b97fa700] DEBUG - Request: [192.168.1.97:60280] GET /playQueues/6 (6 live)
+Sep 02, 2014 19:23:29 [0x7fa5b97fa700] DEBUG - PlayQueue: total generated: 20354, before cursor: 0, after cursor: 99
+Sep 02, 2014 19:23:29 [0x7fa5b97fa700] DEBUG - PlayQueue: No need to refresh, active window is operational.
+Sep 02, 2014 19:23:29 [0x7fa5b97fa700] DEBUG - It took 0.030000 sec to serialize a list with 21 elements.
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46322] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=14755&metadataType=10&state=-1&mediaState=analyzing (7 live)
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG -  * metadataItemID => 14755
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG -  * state => -1
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] DEBUG -  * mediaState => analyzing
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46323] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=14755&metadataType=10&state=-1&mediaState=thumbnailing (7 live)
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG -  * metadataItemID => 14755
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG -  * state => -1
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] DEBUG -  * mediaState => thumbnailing
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46324] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=14755&metadataType=10&state=-1&mediaState=idle (7 live)
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG -  * metadataItemID => 14755
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG -  * state => -1
+Sep 02, 2014 19:23:30 [0x7fa5b97fa700] DEBUG -  * mediaState => idle
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 1 elements.
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - MDE: analyzing track part 13061: mp3/mp3
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - MDE: selected media 0
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - [Universal] Using local file path instead of URL: /data/All/Music/Kiko/Kiko - Midnight Magic (GoodLife, 2001)/Kiko - Midnight Magic - 02 - Monique.mp3
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - [Universal] Transcoding to mp3//mp3
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Cleaning directory for session lsd2u3agdjrcz0k9 (/apps/plexmediaserver/temp/plex-transcode-lsd2u3agdjrcz0k9-bdf5d2fe-14a3-4e88-ab12-c28da8a76308)
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Starting a transcode session lsd2u3agdjrcz0k9 at offset -1.0 (stopped=1)
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Job running: /apps/plexmediaserver/Binaries/Resources/Plex New Transcoder -i /data/All/Music/Kiko/Kiko - Midnight Magic (GoodLife, 2001)/Kiko - Midnight Magic - 02 - Monique.mp3 -threads 0 -y -f mp3 -loglevel quiet -loglevel_plex error -map_metadata -1 -progressurl http://127.0.0.1:32400/video/:/transcode/session/lsd2u3agdjrcz0k9/progress -acodec libmp3lame -ac 2 -map 0:0 -aq 2 - 
+Sep 02, 2014 19:23:30 [0x7fa5b87f8700] INFO - [Transcoder] Input #0, mp3, from '/data/All/Music/Kiko/Kiko - Midnight Magic (GoodLife, 2001)/Kiko - Midnight Magic - 02 - Monique.mp3':
+Sep 02, 2014 19:23:30 [0x7fa5c0ff9700] INFO - [Transcoder]     Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 128 kb/s
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG -  [FFMPEG] Duration: 361
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Read line, and done: 1
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Started session successfully: lsd2u3agdjrcz0k9
+Sep 02, 2014 19:23:30 [0x7fa5bb7fe700] DEBUG - Adding compression to the stream output.
+Sep 02, 2014 19:23:30 [0x7fa5bbfff700] DEBUG - Started universal transcode output thread
+Sep 02, 2014 19:23:31 [0x7fa5baffd700] DEBUG - [TranscodeOutputStream] Input processing thread started at offset 0 for -1 bytes.
+Sep 02, 2014 19:23:31 [0x7fa5b97fa700] INFO - [Transcoder] Output #0, mp3, to 'pipe:':
+Sep 02, 2014 19:23:31 [0x7fa5b87f8700] INFO - [Transcoder]     Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+Sep 02, 2014 19:23:32 [0x7fa5cbc20700] DEBUG - Making a filtered data buffer with 49152 bytes.
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60289] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:23:32 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46329] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=1.7&size=-38&speed=3.3&remaining=107 (8 live)
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG -  * progress => 1.7
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG -  * remaining => 107
+Sep 02, 2014 19:23:33 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:33 [0x7fa5cb41f700] DEBUG - Making a filtered data buffer with 65536 bytes.
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46330] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=3.6&size=-38&speed=3.3&remaining=106 (7 live)
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG -  * progress => 3.6
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG -  * remaining => 106
+Sep 02, 2014 19:23:35 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:35 [0x7fa5cbc20700] DEBUG - Making a filtered data buffer with 69632 bytes.
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46333] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=5.5&size=-38&speed=3.4&remaining=102 (8 live)
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG -  * progress => 5.5
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG -  * remaining => 102
+Sep 02, 2014 19:23:37 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46335] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=7.2&size=-38&speed=3.4&remaining=98 (8 live)
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG -  * progress => 7.2
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG -  * remaining => 98
+Sep 02, 2014 19:23:39 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46337] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=9.1&size=-38&speed=3.4&remaining=97 (8 live)
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG -  * progress => 9.1
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG -  * remaining => 97
+Sep 02, 2014 19:23:41 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46338] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=11.1&size=-38&speed=3.6&remaining=93 (7 live)
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG -  * progress => 11.1
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG -  * remaining => 93
+Sep 02, 2014 19:23:43 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46339] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=13.0&size=-38&speed=3.4&remaining=90 (7 live)
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG -  * progress => 13.0
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG -  * remaining => 90
+Sep 02, 2014 19:23:45 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46340] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=15.0&size=-38&speed=3.5&remaining=88 (8 live)
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG -  * progress => 15.0
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG -  * remaining => 88
+Sep 02, 2014 19:23:47 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46341] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=16.9&size=-38&speed=3.3&remaining=87 (8 live)
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG -  * progress => 16.9
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG -  * remaining => 87
+Sep 02, 2014 19:23:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG - Request: [192.168.1.97:60304] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:23:49 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46342] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=18.8&size=-38&speed=3.4&remaining=87 (7 live)
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG -  * progress => 18.8
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG -  * remaining => 87
+Sep 02, 2014 19:23:51 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46343] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=20.8&size=-38&speed=3.4&remaining=85 (7 live)
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG -  * progress => 20.8
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG -  * remaining => 85
+Sep 02, 2014 19:23:53 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46344] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=22.7&size=-38&speed=3.5&remaining=82 (8 live)
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG -  * progress => 22.7
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG -  * remaining => 82
+Sep 02, 2014 19:23:55 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46345] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=24.7&size=-38&speed=3.6&remaining=78 (8 live)
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG -  * progress => 24.7
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG -  * remaining => 78
+Sep 02, 2014 19:23:57 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:57 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: PLAYER departed after not being seen for 181.591384 seconds: 192.168.1.70
+Sep 02, 2014 19:23:57 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: SERVER departed after not being seen for 181.589376 seconds: 192.168.1.70 (Banana Peel)
+Sep 02, 2014 19:23:57 [0x7fa5c2ffd700] DEBUG - Notifying the system bundle an update to server /system/notify/serverUpdated?host=192.168.1.70
+Sep 02, 2014 19:23:57 [0x7fa5c2ffd700] DEBUG - [com.plexapp.system] Sending command over HTTP (GET): /system/notify/serverUpdated?host=192.168.1.70
+Sep 02, 2014 19:23:57 [0x7fa5c2ffd700] DEBUG - HTTP requesting to: http://127.0.0.1:56387/system/notify/serverUpdated?host=192.168.1.70
+Sep 02, 2014 19:23:57 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46347] GET /servers (7 live)
+Sep 02, 2014 19:23:57 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 2 elements.
+Sep 02, 2014 19:23:57 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.64:46812] GET /library/sections (7 live)
+Sep 02, 2014 19:23:57 [0x7fa5bb7fe700] DEBUG - It took 0.030000 sec to serialize a list with 6 elements.
+Sep 02, 2014 19:23:58 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.64:46813] GET /channels/all (7 live)
+Sep 02, 2014 19:23:58 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:23:58 [0x7fa5c2ffd700] DEBUG - [com.plexapp.system] HTTP reply status 200, with 0 bytes of content.
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46352] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=26.6&size=-38&speed=3.4&remaining=76 (7 live)
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG -  * progress => 26.6
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG -  * remaining => 76
+Sep 02, 2014 19:23:59 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:00 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60354] GET /library/sections (7 live)
+Sep 02, 2014 19:24:00 [0x7fa5b87f8700] DEBUG - It took 0.010000 sec to serialize a list with 6 elements.
+Sep 02, 2014 19:24:00 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60355] GET /channels/all (7 live)
+Sep 02, 2014 19:24:00 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46353] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=28.5&size=-38&speed=3.5&remaining=75 (7 live)
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG -  * progress => 28.5
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG -  * remaining => 75
+Sep 02, 2014 19:24:01 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46354] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=30.5&size=-38&speed=3.7&remaining=70 (8 live)
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG -  * progress => 30.5
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG -  * remaining => 70
+Sep 02, 2014 19:24:03 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60369] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:24:03 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46355] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=32.4&size=-38&speed=3.5&remaining=68 (8 live)
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG -  * progress => 32.4
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG -  * remaining => 68
+Sep 02, 2014 19:24:05 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46356] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=34.3&size=-38&speed=3.4&remaining=69 (7 live)
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG -  * progress => 34.3
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG -  * remaining => 69
+Sep 02, 2014 19:24:07 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46357] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=36.3&size=-38&speed=3.6&remaining=67 (8 live)
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG -  * progress => 36.3
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG -  * remaining => 67
+Sep 02, 2014 19:24:09 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46358] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=38.2&size=-38&speed=3.7&remaining=62 (7 live)
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG -  * progress => 38.2
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG -  * remaining => 62
+Sep 02, 2014 19:24:11 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46359] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=40.2&size=-38&speed=3.4&remaining=61 (7 live)
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG -  * progress => 40.2
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG -  * remaining => 61
+Sep 02, 2014 19:24:13 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46360] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=42.1&size=-38&speed=3.5&remaining=61 (8 live)
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG -  * progress => 42.1
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG -  * remaining => 61
+Sep 02, 2014 19:24:15 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46361] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=44.0&size=-38&speed=3.5&remaining=58 (8 live)
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG -  * progress => 44.0
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG -  * remaining => 58
+Sep 02, 2014 19:24:17 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46363] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=46.0&size=-38&speed=3.5&remaining=56 (7 live)
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG -  * progress => 46.0
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG -  * remaining => 56
+Sep 02, 2014 19:24:19 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60382] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:24:19 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46364] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=47.9&size=-38&speed=3.7&remaining=53 (8 live)
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG -  * progress => 47.9
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG -  * remaining => 53
+Sep 02, 2014 19:24:21 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46365] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=49.9&size=-38&speed=3.4&remaining=52 (8 live)
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG -  * progress => 49.9
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG -  * remaining => 52
+Sep 02, 2014 19:24:23 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46366] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=51.8&size=-38&speed=3.5&remaining=51 (8 live)
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG -  * progress => 51.8
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG -  * remaining => 51
+Sep 02, 2014 19:24:25 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46367] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=53.7&size=-38&speed=3.5&remaining=48 (8 live)
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG -  * progress => 53.7
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG -  * remaining => 48
+Sep 02, 2014 19:24:27 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46368] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=56.0&size=-38&speed=3.6&remaining=45 (7 live)
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG -  * progress => 56.0
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG -  * remaining => 45
+Sep 02, 2014 19:24:29 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46369] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=57.9&size=-38&speed=3.6&remaining=42 (8 live)
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG -  * progress => 57.9
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG -  * remaining => 42
+Sep 02, 2014 19:24:31 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46370] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=59.8&size=-38&speed=3.5&remaining=40 (7 live)
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG -  * progress => 59.8
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG -  * remaining => 40
+Sep 02, 2014 19:24:33 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60388] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:24:34 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46371] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=61.8&size=-38&speed=3.5&remaining=39 (7 live)
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG -  * progress => 61.8
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG -  * remaining => 39
+Sep 02, 2014 19:24:35 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46372] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=63.7&size=-38&speed=3.5&remaining=38 (8 live)
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG -  * progress => 63.7
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG -  * remaining => 38
+Sep 02, 2014 19:24:37 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46374] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=65.7&size=-38&speed=3.5&remaining=36 (7 live)
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG -  * progress => 65.7
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG -  * remaining => 36
+Sep 02, 2014 19:24:39 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46376] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=67.6&size=-38&speed=3.5&remaining=34 (7 live)
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG -  * progress => 67.6
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG -  * remaining => 34
+Sep 02, 2014 19:24:41 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46377] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=69.5&size=-38&speed=3.5&remaining=32 (8 live)
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG -  * progress => 69.5
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG -  * remaining => 32
+Sep 02, 2014 19:24:43 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46378] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=71.5&size=-38&speed=3.5&remaining=30 (8 live)
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG -  * progress => 71.5
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG -  * remaining => 30
+Sep 02, 2014 19:24:45 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46379] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=73.4&size=-38&speed=3.5&remaining=28 (7 live)
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG -  * progress => 73.4
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG -  * remaining => 28
+Sep 02, 2014 19:24:47 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46380] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=75.6&size=-38&speed=3.6&remaining=25 (8 live)
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG -  * progress => 75.6
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG -  * remaining => 25
+Sep 02, 2014 19:24:49 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60405] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:24:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46381] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=77.6&size=-38&speed=3.5&remaining=23 (8 live)
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG -  * progress => 77.6
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG -  * remaining => 23
+Sep 02, 2014 19:24:51 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46382] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=79.2&size=-38&speed=3.3&remaining=22 (7 live)
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG -  * progress => 79.2
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG -  * remaining => 22
+Sep 02, 2014 19:24:53 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46383] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=81.2&size=-38&speed=3.5&remaining=20 (7 live)
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG -  * progress => 81.2
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG -  * remaining => 20
+Sep 02, 2014 19:24:55 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46384] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=83.1&size=-38&speed=3.6&remaining=18 (7 live)
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG -  * progress => 83.1
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG -  * remaining => 18
+Sep 02, 2014 19:24:57 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46385] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=85.0&size=-38&speed=3.4&remaining=16 (7 live)
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG -  * progress => 85.0
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG -  * remaining => 16
+Sep 02, 2014 19:24:59 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46386] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=87.0&size=-38&speed=3.6&remaining=14 (7 live)
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG -  * progress => 87.0
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG -  * remaining => 14
+Sep 02, 2014 19:25:01 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46387] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=88.9&size=-38&speed=3.5&remaining=12 (8 live)
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG -  * progress => 88.9
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG -  * remaining => 12
+Sep 02, 2014 19:25:03 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46388] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=90.9&size=-38&speed=3.3&remaining=10 (8 live)
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG -  * progress => 90.9
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG -  * remaining => 10
+Sep 02, 2014 19:25:05 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG - Request: [192.168.1.97:60417] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:25:06 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46389] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=92.8&size=-38&speed=3.6&remaining=8 (8 live)
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG -  * progress => 92.8
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG -  * remaining => 8
+Sep 02, 2014 19:25:07 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46390] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=94.7&size=-38&speed=3.6&remaining=6 (8 live)
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG -  * progress => 94.7
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG -  * remaining => 6
+Sep 02, 2014 19:25:09 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46392] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=96.7&size=-38&speed=3.5&remaining=4 (8 live)
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG -  * progress => 96.7
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG -  * remaining => 4
+Sep 02, 2014 19:25:11 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG - Request: [127.0.0.1:46393] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=98.6&size=-38&speed=3.5&remaining=2 (8 live)
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG -  * progress => 98.6
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG -  * remaining => 2
+Sep 02, 2014 19:25:13 [0x7fa5b97fa700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46394] PUT /video/:/transcode/session/lsd2u3agdjrcz0k9/progress?progress=100.0&size=-38&speed=2.5&remaining=0 (8 live)
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG -  * progress => 100.0
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG -  * speed => 2.5
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG -  * remaining => 0
+Sep 02, 2014 19:25:14 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:25:14 [0x7fa5bbfff700] DEBUG - Universal transcode session finished reading output.
+Sep 02, 2014 19:25:14 [0x7fa5bbfff700] DEBUG - Finished universal transcode output thread
+Sep 02, 2014 19:25:14 [0x7fa5bbfff700] DEBUG - Notifying stream that data is complete.
+Sep 02, 2014 19:25:15 [0x7fa5baffd700] DEBUG - [TranscodeOutputStream] Input processing thread exited after writing 8010009 bytes, m_closed=0, m_endOfFileReached=1, session->isStopped()=0
+Sep 02, 2014 19:25:15 [0x7fa5cb41f700] DEBUG - [TranscodeOutputStream] Reached end of file
+Sep 02, 2014 19:25:15 [0x7fa5cbc20700] DEBUG - Removed transcode output stream 0x7fa5a435ef20, active count 1 => 0
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60425] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:25:19 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Shutting down idle session lsd2u3agdjrcz0k9 (idle time is 180 seconds)
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Killing job.
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Signalling job ID 17344 with 9
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Job was already killed, not killing again.
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Stopping transcode session lsd2u3agdjrcz0k9
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Cleaning directory for session lsd2u3agdjrcz0k9 (/apps/plexmediaserver/temp/plex-transcode-lsd2u3agdjrcz0k9-bdf5d2fe-14a3-4e88-ab12-c28da8a76308)
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Cleaning directory for session lsd2u3agdjrcz0k9 (/apps/plexmediaserver/temp/plex-transcode-lsd2u3agdjrcz0k9-bdf5d2fe-14a3-4e88-ab12-c28da8a76308)
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Cleaning old transcode directories.
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Whacked session, 0 remaining.
+Sep 02, 2014 19:25:21 [0x7fa5c3fff700] DEBUG - Killed 1 idle sessions, and 0 remain.
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60433] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:25:36 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60440] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:25:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60447] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:26:07 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60466] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:26:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60483] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:26:38 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60523] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (4 live)
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:26:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:02 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: PLAYER departed after not being seen for 181.625174 seconds: 192.168.1.69
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60591] GET /?X-Plex-Client-Identifier=hx0p5m9zrwak0529&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome) (4 live)
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => hx0p5m9zrwak0529
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60595] OPTIONS /library/sections (5 live)
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60594] GET /:/websockets/notifications (4 live)
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - Creating a WebSocket for notification stream for account 1
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - WebSocket: Performing handshake from origin http://localhost:3333
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - Beginning read from WebSocket
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60600] GET /library/sections (5 live)
+Sep 02, 2014 19:27:08 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 6 elements.
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60602] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:27:08 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60638] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:27:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60645] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:27:38 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60651] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:27:49 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:27:51 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: PLAYER arrived: 192.168.1.69
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60711] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:28:08 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60718] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:28:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60725] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:28:39 [0x7fa5c0ff9700] DEBUG - It took 0.010000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60730] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:28:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60740] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:29:10 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60747] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:29:19 [0x7fa5bb7fe700] DEBUG - It took 0.010000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60753] OPTIONS /video/:/transcode/universal/stop?session=lsd2u3agdjrcz0k9 (5 live)
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * session => lsd2u3agdjrcz0k9
+Sep 02, 2014 19:29:34 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60754] GET /playQueues/6 (6 live)
+Sep 02, 2014 19:29:34 [0x7fa5c0ff9700] DEBUG - PlayQueue: total generated: 20354, before cursor: 0, after cursor: 99
+Sep 02, 2014 19:29:34 [0x7fa5c0ff9700] DEBUG - PlayQueue: No need to refresh, active window is operational.
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60755] GET /video/:/transcode/universal/stop?session=lsd2u3agdjrcz0k9 (6 live)
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG -  * session => lsd2u3agdjrcz0k9
+Sep 02, 2014 19:29:34 [0x7fa5b97fa700] WARN - Got a request to stop a transcode session without a session GUID (or with an invalid one).
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60756] GET /music/:/transcode/universal/start.mp3?path=http%3A%2F%2F127.0.0.1%3A32400%2Flibrary%2Fmetadata%2F13084&mediaIndex=0&partIndex=0&maxAudioBitrate=350&protocol=http&session=5f5pqjq4wtr9t3xr&offset=0&X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * path => http://127.0.0.1:32400/library/metadata/13084
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * mediaIndex => 0
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * partIndex => 0
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * maxAudioBitrate => 350
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * protocol => http
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * session => 5f5pqjq4wtr9t3xr
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * offset => 0
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Using profile Web
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Downloading document http://127.0.0.1:32400/library/metadata/13084
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Item required media analysis, performing on-the-fly analysis.
+Sep 02, 2014 19:29:34 [0x7fa5bb7fe700] DEBUG - Job running: /apps/plexmediaserver/Binaries/Plex Media Scanner --analyze --item 13084 
+Sep 02, 2014 19:29:34 [0x7fa5c0ff9700] DEBUG - It took 0.070000 sec to serialize a list with 21 elements.
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60757] GET /playQueues/6 (6 live)
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG - PlayQueue: total generated: 20354, before cursor: 0, after cursor: 99
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG - PlayQueue: No need to refresh, active window is operational.
+Sep 02, 2014 19:29:34 [0x7fa5b87f8700] DEBUG - It took 0.040000 sec to serialize a list with 21 elements.
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46410] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=13084&metadataType=10&state=-1&mediaState=analyzing (6 live)
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * metadataItemID => 13084
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * state => -1
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * mediaState => analyzing
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46411] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=13084&metadataType=10&state=-1&mediaState=thumbnailing (7 live)
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG -  * metadataItemID => 13084
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG -  * state => -1
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] DEBUG -  * mediaState => thumbnailing
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46412] GET /:/metadata/notify/changeItemState?librarySectionID=3&metadataItemID=13084&metadataType=10&state=-1&mediaState=idle (6 live)
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * librarySectionID => 3
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * metadataItemID => 13084
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * metadataType => 10
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * state => -1
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] DEBUG -  * mediaState => idle
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 1 elements.
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - MDE: analyzing track part 11608: mp3/mp3
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - MDE: selected media 0
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - [Universal] Using local file path instead of URL: /data/All/Music/Jamiroquai/A Funk Odyssey/Jamiroquai - Twenty zero one.mp3
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - [Universal] Transcoding to mp3//mp3
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Cleaning directory for session 5f5pqjq4wtr9t3xr (/apps/plexmediaserver/temp/plex-transcode-5f5pqjq4wtr9t3xr-7be6be40-4766-4cd3-a994-075128b6ed5c)
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Starting a transcode session 5f5pqjq4wtr9t3xr at offset -1.0 (stopped=1)
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Job running: /apps/plexmediaserver/Binaries/Resources/Plex New Transcoder -i /data/All/Music/Jamiroquai/A Funk Odyssey/Jamiroquai - Twenty zero one.mp3 -threads 0 -y -f mp3 -loglevel quiet -loglevel_plex error -map_metadata -1 -progressurl http://127.0.0.1:32400/video/:/transcode/session/5f5pqjq4wtr9t3xr/progress -acodec libmp3lame -ac 2 -map 0:0 -aq 2 - 
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] INFO - [Transcoder] Input #0, mp3, from '/data/All/Music/Jamiroquai/A Funk Odyssey/Jamiroquai - Twenty zero one.mp3':
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] INFO - [Transcoder]     Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 160 kb/s
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG -  [FFMPEG] Duration: 315
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Read line, and done: 1
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Started session successfully: 5f5pqjq4wtr9t3xr
+Sep 02, 2014 19:29:35 [0x7fa5bb7fe700] DEBUG - Adding compression to the stream output.
+Sep 02, 2014 19:29:35 [0x7fa5b97fa700] DEBUG - Started universal transcode output thread
+Sep 02, 2014 19:29:35 [0x7fa5baffd700] DEBUG - [TranscodeOutputStream] Input processing thread started at offset 0 for -1 bytes.
+Sep 02, 2014 19:29:35 [0x7fa5b87f8700] INFO - [Transcoder] Output #0, mp3, to 'pipe:':
+Sep 02, 2014 19:29:35 [0x7fa5c0ff9700] INFO - [Transcoder]     Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+Sep 02, 2014 19:29:37 [0x7fa5cb41f700] DEBUG - Making a filtered data buffer with 49152 bytes.
+Sep 02, 2014 19:29:37 [0x7fa5cbc20700] DEBUG - Making a filtered data buffer with 65536 bytes.
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46417] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=2.2&size=-38&speed=3.7&remaining=82 (8 live)
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG -  * progress => 2.2
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG -  * remaining => 82
+Sep 02, 2014 19:29:37 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46419] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=4.4&size=-38&speed=3.5&remaining=84 (8 live)
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG -  * progress => 4.4
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG -  * remaining => 84
+Sep 02, 2014 19:29:39 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:39 [0x7fa5cb41f700] DEBUG - Making a filtered data buffer with 69632 bytes.
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60767] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:29:41 [0x7fa5c0ff9700] DEBUG - It took 0.010000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46421] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=6.7&size=-38&speed=3.6&remaining=83 (8 live)
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG -  * progress => 6.7
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG -  * remaining => 83
+Sep 02, 2014 19:29:41 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46422] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=8.9&size=-38&speed=3.4&remaining=82 (7 live)
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG -  * progress => 8.9
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG -  * remaining => 82
+Sep 02, 2014 19:29:43 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46423] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=11.1&size=-38&speed=3.6&remaining=80 (8 live)
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG -  * progress => 11.1
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG -  * remaining => 80
+Sep 02, 2014 19:29:45 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46424] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=13.3&size=-38&speed=3.4&remaining=79 (8 live)
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG -  * progress => 13.3
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG -  * remaining => 79
+Sep 02, 2014 19:29:47 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60808] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:29:49 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46425] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=15.6&size=-38&speed=3.4&remaining=79 (8 live)
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG -  * progress => 15.6
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG -  * remaining => 79
+Sep 02, 2014 19:29:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46426] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=17.5&size=-38&speed=3.3&remaining=78 (8 live)
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG -  * progress => 17.5
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG -  * remaining => 78
+Sep 02, 2014 19:29:51 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46427] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=19.7&size=-38&speed=3.4&remaining=75 (7 live)
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG -  * progress => 19.7
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG -  * remaining => 75
+Sep 02, 2014 19:29:53 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46428] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=21.9&size=-38&speed=3.4&remaining=72 (8 live)
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG -  * progress => 21.9
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG -  * remaining => 72
+Sep 02, 2014 19:29:55 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46429] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=24.1&size=-38&speed=3.4&remaining=70 (7 live)
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG -  * progress => 24.1
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG -  * remaining => 70
+Sep 02, 2014 19:29:57 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46430] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=26.3&size=-38&speed=3.3&remaining=69 (7 live)
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG -  * progress => 26.3
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG -  * remaining => 69
+Sep 02, 2014 19:29:59 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46431] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=28.3&size=-38&speed=3.3&remaining=68 (7 live)
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG -  * progress => 28.3
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG -  * remaining => 68
+Sep 02, 2014 19:30:01 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46432] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=30.5&size=-38&speed=3.4&remaining=65 (8 live)
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG -  * progress => 30.5
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG -  * remaining => 65
+Sep 02, 2014 19:30:03 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46433] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=32.7&size=-38&speed=3.5&remaining=62 (7 live)
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG -  * progress => 32.7
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG -  * remaining => 62
+Sep 02, 2014 19:30:05 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46434] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=34.9&size=-38&speed=3.4&remaining=60 (8 live)
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG -  * progress => 34.9
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG -  * remaining => 60
+Sep 02, 2014 19:30:07 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46435] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=37.1&size=-38&speed=3.6&remaining=57 (8 live)
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG -  * progress => 37.1
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG -  * remaining => 57
+Sep 02, 2014 19:30:09 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46436] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=39.4&size=-38&speed=3.5&remaining=54 (8 live)
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG -  * progress => 39.4
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG -  * remaining => 54
+Sep 02, 2014 19:30:11 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG - Request: [192.168.1.97:60821] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:30:11 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46437] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=41.6&size=-38&speed=3.4&remaining=54 (8 live)
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG -  * progress => 41.6
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG -  * remaining => 54
+Sep 02, 2014 19:30:13 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46438] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=43.8&size=-38&speed=3.5&remaining=52 (8 live)
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG -  * progress => 43.8
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG -  * remaining => 52
+Sep 02, 2014 19:30:15 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46439] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=46.3&size=-38&speed=3.7&remaining=47 (7 live)
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG -  * progress => 46.3
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG -  * remaining => 47
+Sep 02, 2014 19:30:17 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60835] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:30:19 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46440] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=48.3&size=-38&speed=3.4&remaining=46 (8 live)
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG -  * progress => 48.3
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG -  * remaining => 46
+Sep 02, 2014 19:30:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46441] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=50.8&size=-38&speed=3.7&remaining=44 (7 live)
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG -  * progress => 50.8
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG -  * remaining => 44
+Sep 02, 2014 19:30:21 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46442] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=53.0&size=-38&speed=3.4&remaining=41 (8 live)
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG -  * progress => 53.0
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG -  * remaining => 41
+Sep 02, 2014 19:30:23 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46443] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=55.2&size=-38&speed=3.5&remaining=41 (8 live)
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG -  * progress => 55.2
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG -  * remaining => 41
+Sep 02, 2014 19:30:25 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46444] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=57.5&size=-38&speed=3.5&remaining=39 (8 live)
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG -  * progress => 57.5
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG -  * remaining => 39
+Sep 02, 2014 19:30:27 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46445] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=59.7&size=-38&speed=3.4&remaining=37 (7 live)
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG -  * progress => 59.7
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG -  * remaining => 37
+Sep 02, 2014 19:30:29 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46447] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=61.9&size=-38&speed=3.7&remaining=34 (7 live)
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG -  * progress => 61.9
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG -  * remaining => 34
+Sep 02, 2014 19:30:31 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46448] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=64.1&size=-38&speed=3.5&remaining=32 (8 live)
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG -  * progress => 64.1
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG -  * remaining => 32
+Sep 02, 2014 19:30:33 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46449] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=66.3&size=-38&speed=3.5&remaining=31 (7 live)
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG -  * progress => 66.3
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG -  * remaining => 31
+Sep 02, 2014 19:30:35 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46450] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=68.6&size=-38&speed=3.5&remaining=29 (7 live)
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG -  * progress => 68.6
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG -  * remaining => 29
+Sep 02, 2014 19:30:37 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46452] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=70.8&size=-38&speed=3.5&remaining=27 (7 live)
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG -  * progress => 70.8
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG -  * remaining => 27
+Sep 02, 2014 19:30:39 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46454] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=73.3&size=-38&speed=3.6&remaining=24 (8 live)
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG -  * progress => 73.3
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG -  * remaining => 24
+Sep 02, 2014 19:30:41 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60852] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (8 live)
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:30:42 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46455] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=75.6&size=-38&speed=3.5&remaining=22 (7 live)
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG -  * progress => 75.6
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG -  * remaining => 22
+Sep 02, 2014 19:30:43 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46456] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=77.8&size=-38&speed=3.7&remaining=20 (7 live)
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG -  * progress => 77.8
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG -  * speed => 3.7
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG -  * remaining => 20
+Sep 02, 2014 19:30:45 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46457] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=80.0&size=-38&speed=3.4&remaining=18 (7 live)
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG -  * progress => 80.0
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG -  * remaining => 18
+Sep 02, 2014 19:30:47 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60857] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (7 live)
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:30:49 [0x7fa5c0ff9700] DEBUG - It took 0.010000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46458] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=82.2&size=-38&speed=3.5&remaining=17 (8 live)
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG -  * progress => 82.2
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG -  * remaining => 17
+Sep 02, 2014 19:30:49 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46459] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=84.4&size=-38&speed=3.6&remaining=14 (7 live)
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG -  * progress => 84.4
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG -  * remaining => 14
+Sep 02, 2014 19:30:51 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46460] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=86.7&size=-38&speed=3.4&remaining=12 (7 live)
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG -  * progress => 86.7
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG -  * remaining => 12
+Sep 02, 2014 19:30:53 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46461] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=88.9&size=-38&speed=3.6&remaining=10 (8 live)
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG -  * progress => 88.9
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG -  * remaining => 10
+Sep 02, 2014 19:30:55 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46462] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=91.1&size=-38&speed=3.5&remaining=8 (7 live)
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG -  * progress => 91.1
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG -  * speed => 3.5
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG -  * remaining => 8
+Sep 02, 2014 19:30:57 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46463] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=93.0&size=-38&speed=3.3&remaining=6 (7 live)
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG -  * progress => 93.0
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG -  * speed => 3.3
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG -  * remaining => 6
+Sep 02, 2014 19:30:59 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46464] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=95.6&size=-38&speed=3.6&remaining=4 (8 live)
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG -  * progress => 95.6
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG -  * remaining => 4
+Sep 02, 2014 19:31:01 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG - Request: [127.0.0.1:46465] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=97.5&size=-38&speed=3.4&remaining=2 (7 live)
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG -  * progress => 97.5
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG -  * size => -38
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG -  * speed => 3.4
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG -  * remaining => 2
+Sep 02, 2014 19:31:03 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG - Request: [127.0.0.1:46466] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=100.0&size=-38&speed=3.6&remaining=1 (7 live)
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG -  * progress => 100.0
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG -  * size => -38
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG -  * speed => 3.6
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG -  * remaining => 1
+Sep 02, 2014 19:31:05 [0x7fa5bb7fe700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG - Request: [127.0.0.1:46467] PUT /video/:/transcode/session/5f5pqjq4wtr9t3xr/progress?progress=100.0&size=-38&speed=0.3&remaining=0 (8 live)
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG -  * progress => 100.0
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG -  * size => -38
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG -  * speed => 0.3
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG -  * remaining => 0
+Sep 02, 2014 19:31:05 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 0 elements.
+Sep 02, 2014 19:31:05 [0x7fa5b97fa700] DEBUG - Universal transcode session finished reading output.
+Sep 02, 2014 19:31:05 [0x7fa5b97fa700] DEBUG - Finished universal transcode output thread
+Sep 02, 2014 19:31:05 [0x7fa5b97fa700] DEBUG - Notifying stream that data is complete.
+Sep 02, 2014 19:31:06 [0x7fa5baffd700] DEBUG - [TranscodeOutputStream] Input processing thread exited after writing 7580285 bytes, m_closed=0, m_endOfFileReached=1, session->isStopped()=0
+Sep 02, 2014 19:31:06 [0x7fa5cbc20700] DEBUG - [TranscodeOutputStream] Reached end of file
+Sep 02, 2014 19:31:06 [0x7fa5cbc20700] DEBUG - Removed transcode output stream 0x1372a50, active count 1 => 0
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Shutting down idle session 5f5pqjq4wtr9t3xr (idle time is 180 seconds)
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Killing job.
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Signalling job ID 17682 with 9
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Job was already killed, not killing again.
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Stopping transcode session 5f5pqjq4wtr9t3xr
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Cleaning directory for session 5f5pqjq4wtr9t3xr (/apps/plexmediaserver/temp/plex-transcode-5f5pqjq4wtr9t3xr-7be6be40-4766-4cd3-a994-075128b6ed5c)
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Cleaning directory for session 5f5pqjq4wtr9t3xr (/apps/plexmediaserver/temp/plex-transcode-5f5pqjq4wtr9t3xr-7be6be40-4766-4cd3-a994-075128b6ed5c)
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Cleaning old transcode directories.
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Whacked session, 0 remaining.
+Sep 02, 2014 19:31:12 [0x7fa5c3fff700] DEBUG - Killed 1 idle sessions, and 0 remain.
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60867] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:31:14 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:31:17 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: PLAYER departed after not being seen for 181.695570 seconds: 192.168.1.69
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60872] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:31:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60918] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:31:44 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60932] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:31:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60949] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:32:15 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60954] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:32:19 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60970] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:32:46 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60975] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (6 live)
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:32:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:33:16 [0x7fa5c2ffd700] DEBUG - NetworkServiceBrowser: PLAYER arrived: 192.168.1.69
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:60988] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:33:17 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:60993] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:33:19 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:61025] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:33:47 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:61030] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:33:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:61038] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:34:19 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:61043] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:34:19 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:61053] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:34:49 [0x7fa5b87f8700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG - Request: [192.168.1.97:61059] GET /?X-Plex-Client-Identifier=5cbbrvgdz8semi&X-Plex-Product=Plex+Web&X-Plex-Device=OSX&X-Plex-Platform=Chrome&X-Plex-Platform-Version=37.0&X-Plex-Version=dev&X-Plex-Device-Name=Plex+Web+(Chrome)&X-Plex-Token=xxxxxxxxxxxxxxxxxxxx&X-Plex-Username=plexusername (5 live)
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Client-Identifier => 5cbbrvgdz8semi
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Product => Plex Web
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device => OSX
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform => Chrome
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Platform-Version => 37.0
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Version => dev
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Device-Name => Plex Web (Chrome)
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Token => xxxxxxxxxxxxxxxxxxxx
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG -  * X-Plex-Username => plexusername
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG - We found auth token (xxxxxxxxxxxxxxxxxxxx), enabling token-based authentication.
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG - Refreshing tokens inside the token-based authentication filter.
+Sep 02, 2014 19:34:49 [0x7fa5c0ff9700] DEBUG - It took 0.000000 sec to serialize a list with 11 elements.
+Sep 02, 2014 19:34:53 [0x7fa5b87f8700] DEBUG - Request: [192.168.1.97:61066] OPTIONS /video/:/transcode/universal/stop?session=5f5pqjq4wtr9t3xr (6 live)
