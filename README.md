@@ -125,11 +125,13 @@ Once this is complete, please re-start the service, listen to audio via Plex and
 $ nohup plex-scrobble.py &
 ```
 
-Troubleshooting
+Troubleshooting & Known Issues
 -------------
 
 * If you're experiencing authentication issues (appearing in plex_scrobble.log), remove the ~/.config/plex-lastfm-scrobbler/session file. This stores your Last.FM authentication token. There is no harm in removing/recreating this as many times as needed. 
 * Log an issue https://github.com/jesseward/plex-lastfm-scrobbler/issues/new
+* If your Plex client supports the universal transcoder (see "Old and Universal transcoder @ https://support.plex.tv/hc/en-us/articles/200250377-Transcoding-Media), tracks will be scrobbled at the start of play. This is due to the way that the universal transcoder writes to the Plex log file. See issue 11 (https://github.com/jesseward/plex-lastfm-scrobbler/issues/11) for background discussion.
+* We've seen instances when Plex Media Server does not report the length of an audio file. This may occur before a full library analyze has completed. When the track length is not reported by the Plex Media Server, the song will not be scrobble. Try forcing the "Analyze" audio library function. Further discussion found in issue #9 https://github.com/jesseward/plex-lastfm-scrobbler/issues/9
 
 Contributing 
 -----------
