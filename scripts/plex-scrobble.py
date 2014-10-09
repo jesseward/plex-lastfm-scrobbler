@@ -55,6 +55,10 @@ def main(config):
     log_watch = threading.Thread(target=monitor_log, args=(config,))
     log_watch.start()
 
+    # main thread ended/crashed. exit.
+    log_watch.join()
+    sys.exit(1)
+
 if __name__ == '__main__':
 
     p = OptionParser()
@@ -75,6 +79,7 @@ if __name__ == '__main__':
 
     # apply defaults to *required* configuration values.
     config = ConfigParser.ConfigParser(defaults = {
+        'config file location': options.config_file,
         'session': os.path.expanduser('~/.config/plex-lastfm-scrobbler/session_key'),
         'mediaserver_url': 'http://localhost:32400',
         'mediaserver_log_location': platform_log_directory(),
