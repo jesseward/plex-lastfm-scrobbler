@@ -76,6 +76,8 @@ def fetch_metadata(l_id, config):
     # add support for fetching album metadata from the track object.
     album = track.get('parentTitle')
     if not album:
+        logger.warn('unable to locate album name for ibary-id={l_id}'.format(
+            l_id=l_id))
         album = None
 
     if not all((artist, song)):
@@ -146,7 +148,8 @@ def monitor_log(config):
 
             # submit to last.fm
             lastfm = LastFm(config)
-            a = lastfm.scrobble(metadata['artist'], metadata['track'])
+            a = lastfm.scrobble(metadata['artist'], metadata['track'],
+                    metadata['album'])
 
             # scrobble was not successful , add to our retry queue
             if not a:

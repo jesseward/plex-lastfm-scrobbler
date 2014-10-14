@@ -125,8 +125,8 @@ class LastFm(object):
         session = self.get_session()
         ts = '%d' % (time.time() - 100)
 
-        self.logger.info(u'submitting {artist} - {track} to last.fm.'.format(
-                artist=artist, track=track))
+        self.logger.info(u'submitting {artist} - {track} ({album}) to last.fm.'.format(
+                artist=artist, track=track, album=album))
 
         try:
             self._do_lastfm_query('POST', 'track.scrobble', timestamp=ts,

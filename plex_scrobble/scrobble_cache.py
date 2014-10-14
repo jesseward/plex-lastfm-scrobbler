@@ -19,19 +19,20 @@ class ScrobbleCache(object):
     def length(self):
         return len(self.cache)
 
-    def add(self, key, value, cache_hit=1):
+    def add(self, key, value, album, cache_hit=1):
 
-        self.logger.info('adding \'{key}\' \'{value}\' to retry cache.'.format(
-            key=key, value=value))
+        self.logger.info('adding \'{key}\' \'{value}\' ({album}) to retry cache.'.format(
+            key=key, value=value, album=album))
 
-        self.cache[str(time.time())] = [key, value, cache_hit]
+        self.cache[str(time.time())] = [key, value, cache_hit, album]
         self.cache.sync()
 
     def remove(self, key):
         ''' remove an existing entry from cache file. '''
 
-        self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' from retry cache.'.format(
-            key=key, artist=self.cache[key][0], track=self.cache[key][1]))
+        self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' ({album})from retry cache.'.format(
+            key=key, artist=self.cache[key][0], track=self.cache[key][1],
+            album=elf.cache[key][3]))
         del self.cache[key]
         self.cache.sync()
 
@@ -57,7 +58,8 @@ class ScrobbleCache(object):
         for key in self.cache:
             # do submissions retry
             try:
-                a = lastfm.scrobble(self.cache[key][0], self.cache[key][1])
+                a = lastfm.scrobble(self.cache[key][0], self.cache[key][1],
+                        self.cache[key][3])
                 self.cache[key][2] += 1
             except:
                 pass
