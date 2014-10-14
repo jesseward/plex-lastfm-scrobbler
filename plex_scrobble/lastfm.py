@@ -120,7 +120,7 @@ class LastFm(object):
         return token['token'][0]
 
 
-    def scrobble(self, artist, track):
+    def scrobble(self, artist, track, album):
     
         session = self.get_session()
         ts = '%d' % (time.time() - 100)
@@ -130,7 +130,7 @@ class LastFm(object):
 
         try:
             self._do_lastfm_query('POST', 'track.scrobble', timestamp=ts,
-                artist=artist, track=track, sk=session)
+                artist=artist, track=track, album=album, sk=session)
         except:
             return False
 

@@ -58,7 +58,7 @@ def fetch_metadata(l_id, config):
     tree = ET.fromstring(metadata.read())
     track = tree.find('Track')
 
-    # BUG: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
+    # BUGFIX: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
     if track is None: 
         logger.info('Ignoring played item library-id={l_id}, could not determine audio library information.'.
                 format(l_id=l_id))
@@ -72,12 +72,18 @@ def fetch_metadata(l_id, config):
 
     song = track.get('title')
 
+    # BUGFIX : https://github.com/jesseward/plex-lastfm-scrobbler/issues/19
+    # add support for fetching album metadata from the track object.
+    album = track.get('parentTitle')
+    if not album:
+        album = None
+
     if not all((artist, song)):
         logger.warn('unable to retrieve meatadata keys for libary-id={l_id}'.
                 format(l_id=l_id))
         return False
 
-    return {'track': song, 'artist': artist}
+    return {'track': song, 'artist': artist, 'album': album}
 
 
 def monitor_log(config):
@@ -145,7 +151,7 @@ def monitor_log(config):
             # scrobble was not successful , add to our retry queue
             if not a:
                 cache = ScrobbleCache(config)
-                cache.add(metadata['artist'], metadata['track'])
+                cache.add(metadata['artist'], metadata['track'], metadata['album'])
                 cache.close
 
             last_played = played
