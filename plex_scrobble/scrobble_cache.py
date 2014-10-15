@@ -21,7 +21,7 @@ class ScrobbleCache(object):
 
     def add(self, key, value, album, cache_hit=1):
 
-        self.logger.info('adding \'{key}\' \'{value}\' ({album}) to retry cache.'.format(
+        self.logger.info(u'adding \'{key}\' \'{value}\' ({album}) to retry cache.'.format(
             key=key, value=value, album=album))
 
         self.cache[str(time.time())] = [key, value, cache_hit, album]
@@ -45,7 +45,7 @@ class ScrobbleCache(object):
         ''' debug method to dump cache to stdout. '''
 
         for key in self.cache:
-            print 'time={key}, artist={artist}, track={track}, age={age}'.format(
+            print u'time={key}, artist={artist}, track={track}, age={age}'.format(
                                         key=key, artist=self.cache[key][0], track=self.cache[key][1],
                                         age=self.cache[key][2])
 
