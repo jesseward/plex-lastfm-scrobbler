@@ -113,7 +113,8 @@ def monitor_log(config):
 
             if int(os.fstat(f.fileno()).st_mtime) == st_mtime: continue
 
-            logger.debug('Possible log file rotation, resetting file handle')
+            logger.debug('Possible log file rotation, resetting file handle (st_mtime={mtime})'.format(
+                mtime=time.ctime(os.fstat(f.fileno()).st_mtime) ))
             f.close()
 
             try:

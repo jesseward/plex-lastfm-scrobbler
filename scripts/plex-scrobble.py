@@ -3,6 +3,7 @@ import os
 import sys
 import platform
 import logging
+import time
 import threading
 import ConfigParser
 from optparse import OptionParser
@@ -106,6 +107,10 @@ if __name__ == '__main__':
         print 'Please relaunch plex-scrobble service.'
         logger.warn('Exiting application.')
         sys.exit(0)
+
+    logger.debug('using last.fm session key={key} , st_mtime={mtime}'.format(
+        key=config.get('plex-scrobble','session'),
+        mtime=time.ctime(os.path.getmtime(config.get('plex-scrobble','session'))) ))
 
     m = main(config)
     c = cache_retry(config)
