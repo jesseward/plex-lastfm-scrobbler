@@ -32,7 +32,7 @@ class ScrobbleCache(object):
 
         self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' ({album})from retry cache.'.format(
             key=key, artist=self.cache[key][0], track=self.cache[key][1],
-            album=elf.cache[key][3]))
+            album=self.cache[key][3]))
         del self.cache[key]
         self.cache.sync()
 
@@ -45,9 +45,12 @@ class ScrobbleCache(object):
         ''' debug method to dump cache to stdout. '''
 
         for key in self.cache:
-            print u'time={key}, artist={artist}, track={track}, age={age}'.format(
-                                        key=key, artist=self.cache[key][0], track=self.cache[key][1],
-                                        age=self.cache[key][2])
+            print u'time={key}, artist={artist}, track={track}, album={album}age={age}'.format(
+                
+                    key=key, artist=self.cache[key][0], 
+                    track=self.cache[key][1],
+                    album=self.cache[key][3],
+                    age=self.cache[key][2])
 
     def retry_queue(self):
 
