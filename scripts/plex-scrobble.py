@@ -112,5 +112,5 @@ if __name__ == '__main__':
         key=config.get('plex-scrobble','session'),
         mtime=time.ctime(os.path.getmtime(config.get('plex-scrobble','session'))) ))
 
-    m = main(config)
     c = cache_retry(config)
+    m = main(config)
