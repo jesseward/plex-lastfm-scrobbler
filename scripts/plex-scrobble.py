@@ -11,6 +11,7 @@ from optparse import OptionParser
 from plex_scrobble.lastfm import LastFm
 from plex_scrobble.plex_monitor import monitor_log
 from plex_scrobble.scrobble_cache import ScrobbleCache
+from plex_scrobble.pre_check import PLSSanity
 
 def platform_log_directory():
     ''' Retrieves the default platform specific default log location.
@@ -65,6 +66,8 @@ if __name__ == '__main__':
     p = OptionParser()
     p.add_option('-c', '--config', action='store', dest='config_file',
         help='The location to the configuration file.')
+    p.add_option('-p', '--precheck', action='store_true', dest='precheck',
+        default=False, help='Run a pre-check to ensure a correctly configured system.')
     p.add_option('-a', '--authenticate', action='store_true', dest='authenticate',
         default=False, help='Generate a new last.fm session key.')
 
@@ -96,6 +99,12 @@ if __name__ == '__main__':
     # dump our configuration values to the logfile
     for key in config.items('plex-scrobble'):
         logger.debug('config : {0} -> {1}'.format(key[0], key[1]))
+
+    if options.precheck:
+        pc = PLSSanity(config)
+        pc.run()
+        logger.warn('Precheck completed. Exiting.')
+        sys.exit(0)
 
     # if a valid session object does not exist, prompt user
     # to authenticate.
