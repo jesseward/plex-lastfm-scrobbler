@@ -24,6 +24,7 @@ def platform_log_directory():
         'Darwin': os.path.expanduser('~/Library/Logs/Plex Media Server.log'),
         'Linux': '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log',
         'Windows': os.path.join(os.environ.get('LOCALAPPDATA', 'c:'), 'Plex Media Server/Logs/Plex Media Server.log'),
+        'FreeBSD': '/usr/local/plexdata/Plex Media Server/Logs/Plex Media Server.log',
         }
 
     return LOG_DEFAULTS[platform.system()]
