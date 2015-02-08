@@ -52,7 +52,7 @@ def fetch_metadata(l_id, config):
                       error=e))
         return False
     except socket.timeout, e:
-        logger.error('Timeout reading from {url} \'{error}\''.format(url, error=e))
+        logger.error('Timeout reading from {url} \'{error}\''.format(url=url, error=e))
         return False
 
     tree = ET.fromstring(metadata.read())
