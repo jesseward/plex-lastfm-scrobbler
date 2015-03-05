@@ -78,17 +78,17 @@ If you're running Plex Media Server on a Linux based operating system, things sh
 # REQUIRED: mediaserver_url is the location of the http service exposed by Plex Media Server
 # the default values should be 'ok', assuming you're running the plex scrobble
 # script from the same server as your plex media server
-mediaserver_url = 'http://localhost:32400'
+mediaserver_url = http://localhost:32400
 
 # REQUIRED: a python data struture that stores failed scrobbles. plex-scrobble
 # will retry on a 60 minute interval, maximum of 10 attempts if last.fm is
 # experiencing issues.
-cache_location = tmp/plex_scrobble.cache
+cache_location = /tmp/plex_scrobble.cache
 
 # REQUIRED: mediaserver_log_location references the log file location of the plex media server
 # the default under /var/lib/... is the default install of plex media server on 
 # a Linux system. You may wish to change this value to reference your OS install.
-mediaserver_log_location = '/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log'
+mediaserver_log_location = /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log
 
 # REQUIRED: Where do you wish to write the plex-scrobble log file.
 log_file = /tmp/plex_scrobble.log
