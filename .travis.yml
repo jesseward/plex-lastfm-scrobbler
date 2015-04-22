@@ -6,4 +6,4 @@ install:
     pip install .
 script:
     - cd tests && python test_cache.py
-    - cd tests && python test_log_parser.py
+    - python test_log_parser.py
