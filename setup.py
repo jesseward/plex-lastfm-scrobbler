@@ -2,7 +2,7 @@ import os
 from distutils.core import setup
 
 NAME = 'plex-lastfm-scrobbler'
-VERSION = '1.3.1'
+VERSION = '1.3.2'
 
 setup(
     name = 'plex_scrobble',
