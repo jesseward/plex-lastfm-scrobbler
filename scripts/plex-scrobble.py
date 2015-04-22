@@ -31,35 +31,42 @@ def platform_log_directory():
 
 
 def cache_retry(config):
-    '''Thread timer for the cache retry logic.
+    """
+    Thread timer for the cache retry logic.
 
-    Args:
-        config (ConfigParser obj) : user specific configuration params
-    '''
+    :param config: config (ConfigParser obj)
+    """
 
-    logger.info('starting cache_retry thread.')
-    cache = ScrobbleCache(config)
-    # do not retry if cache is empty.
-    if cache.length() > 0:
-        cache.retry_queue()
+    while True:
+        logger.info('starting cache_retry thread.')
+        cache = ScrobbleCache(config)
+        # do not retry if cache is empty.
+        if cache.length() > 0:
+            cache.retry_queue()
 
-    cache.close()
-    # retry cache every hour.
-    threading.Timer(3600, cache_retry, args=(config,)).start()
+        cache.close()
+        time.sleep(3600)
 
 def main(config):
-    ''' The main thread loop
+    """
+    The main thread loop
 
-    Args:
-        config (ConfigParser obj) : user specific configuration params
-    '''
+    :param config: config (ConfigParser obj)
+    """
 
     logger.info('starting log monitor thread.')
     log_watch = threading.Thread(target=monitor_log, args=(config,))
+    log_watch.daemon = True
     log_watch.start()
+
+    # retry cache every hour.
+    cache_thread = threading.Thread(target=cache_retry, args=(config,))
+    cache_thread.daemon = True
+    cache_thread.start()
 
     # main thread ended/crashed. exit.
     log_watch.join()
+    cache_thread.join()
     sys.exit(1)
 
 if __name__ == '__main__':
