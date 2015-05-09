@@ -6,10 +6,16 @@ from lastfm import LastFm
 
 
 class ScrobbleCache(object):
-    ''' provides a light wrapper around Python Shelve. Used to persist
-        a Python dict to disk. '''
+    """
+    provides a light wrapper around Python Shelve. Used to persist
+    a Python dict to disk.
+    """
 
     def __init__(self, config):
+        """
+
+        :param config: Configuration object
+        """
 
         self.config = config
         self.cache = shelve.open(self.config.get('plex-scrobble', 'cache_location'),
@@ -20,6 +26,14 @@ class ScrobbleCache(object):
         return len(self.cache)
 
     def add(self, key, value, album, cache_hit=1):
+        """
+        Add missed scrobble to the retry cache.
+
+        :param key: a time - timestamp
+        :param value: a str representing an artist name
+        :param album: a str representing an album name
+        :param cache_hit: number of times the item has been retried.
+        """
 
         self.logger.info(u'adding \'{key}\' \'{value}\' ({album}) to retry cache.'.format(
             key=key, value=value, album=album))
@@ -28,7 +42,11 @@ class ScrobbleCache(object):
         self.cache.sync()
 
     def remove(self, key):
-        ''' remove an existing entry from cache file. '''
+        """
+        remove an existing entry from cache file.
+
+        :param key: a timestamp.
+        """
 
         self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' ({album})from retry cache.'.format(
             key=key, artist=self.cache[key][0], track=self.cache[key][1],
@@ -42,7 +60,7 @@ class ScrobbleCache(object):
         self.cache.close()
 
     def cache_items(self):
-        ''' debug method to dump cache to stdout. '''
+        """ debug method to dump cache to stdout. """
 
         for key in self.cache:
             print u'time={key}, artist={artist}, track={track}, album={album}age={age}'.format(

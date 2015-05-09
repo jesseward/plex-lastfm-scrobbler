@@ -11,12 +11,13 @@ from scrobble_cache import ScrobbleCache
 
 
 def parse_line(log_line):
-    ''' Matches known audio metadata log entries entries against input (log_line)
+    """
+    Matches known audio metadata log entries entries against input (log_line)
     
-        :param log_line: plex media server log line
-        :type log_line: string
-        :returns: plex media server  metadata id
-        :rtype: integer (or None) '''
+    :param log_line: a str containing a plex media server log line
+    :return: plex media server  metadata id
+    :rtype: integer (or None)
+    """
 
     logger = logging.getLogger(__name__)
 
@@ -36,7 +37,7 @@ def parse_line(log_line):
 
 
 def fetch_metadata(l_id, config):
-    ''' retrieves the metadata information from the Plex media Server api. '''
+    """ retrieves the metadata information from the Plex media Server api. """
 
     logger = logging.getLogger(__name__)
     url = '{url}/library/metadata/{l_id}'.format(url=config.get('plex-scrobble',

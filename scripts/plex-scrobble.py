@@ -14,11 +14,12 @@ from plex_scrobble.scrobble_cache import ScrobbleCache
 from plex_scrobble.pre_check import PLSSanity
 
 def platform_log_directory():
-    ''' Retrieves the default platform specific default log location.
-        This is called if the user does not specify a log location in
-        the configuration file.
-        github issue https://github.com/jesseward/plex-lastfm-scrobbler/issues/5
-    '''
+    """
+    Retrieves the default platform specific default log location.
+    This is called if the user does not specify a log location in
+    the configuration file.
+    github issue https://github.com/jesseward/plex-lastfm-scrobbler/issues/5
+    """
 
     LOG_DEFAULTS = {
         'Darwin': os.path.expanduser('~/Library/Logs/Plex Media Server.log'),
@@ -97,8 +98,15 @@ if __name__ == '__main__':
         'mediaserver_log_location': platform_log_directory(),
         'log_file': '/tmp/plex_scrobble.log'
       })
-    config.read(options.config_file)
 
+    # ISSUE https://github.com/jesseward/plex-lastfm-scrobbler/issues/34
+    try:
+        config.read(options.config_file)
+    except ConfigParser.Error:
+        print 'ERROR: unable to parse config file "{file}". Syntax error?'.format(
+            file=options.config_file)
+        sys.exit(1)
+    
     FORMAT = '%(asctime)-15s [%(process)d] [%(name)s %(funcName)s] [%(levelname)s] %(message)s'
     logging.basicConfig(filename=config.get('plex-scrobble',
       'log_file'), format=FORMAT, level=logging.DEBUG)
