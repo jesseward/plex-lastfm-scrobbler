@@ -13,7 +13,7 @@ from scrobble_cache import ScrobbleCache
 def parse_line(log_line):
     """
     Matches known audio metadata log entries entries against input (log_line)
-    
+
     :param log_line: a str containing a plex media server log line
     :return: plex media server  metadata id
     :rtype: integer (or None)
@@ -24,7 +24,7 @@ def parse_line(log_line):
     REGEX = [
         # universal-transcoder
         re.compile('.*GET\s\/music\/:\/transcode\/universal\/start\.mp3.*metadata%2F(\d+)\&.*'),
-        # stream based transcoder 
+        # stream based transcoder
         re.compile('.*\sDEBUG\s-\sLibrary\sitem\s(\d+)\s\'.*\'\sgot\splayed\sby\saccount.*')
     ]
 
@@ -44,9 +44,14 @@ def fetch_metadata(l_id, config):
       'mediaserver_url'), l_id=l_id)
     logger.info('Fetching library metadata from {url}'.format(url=url))
 
+    req = urllib2.Request(url)
+
+    if config.get('plex-scrobble', 'plex_token'):
+        req.add_header('X-Plex-Token', config.get('plex-scrobble', 'plex_token'))
+
     # fail if request is greater than 2 seconds.
     try:
-        metadata = urllib2.urlopen(url, timeout=2)
+        metadata = urllib2.urlopen(req, timeout=2)
     except urllib2.URLError, e:
         logger.error('urllib2 error reading from {url} \'{error}\''.format(url=url,
                       error=e))
@@ -59,7 +64,7 @@ def fetch_metadata(l_id, config):
     track = tree.find('Track')
 
     # BUGFIX: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
-    if track is None: 
+    if track is None:
         logger.info('Ignoring played item library-id={l_id}, could not determine audio library information.'.
                 format(l_id=l_id))
         return False
