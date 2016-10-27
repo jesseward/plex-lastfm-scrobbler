@@ -2,12 +2,12 @@ plex-lastfm-scrobbler
 =====================
 [![Build Status](https://api.travis-ci.org/jesseward/plex-lastfm-scrobbler.svg?branch=master)](https://api.travis-ci.org/jesseward/plex-lastfm-scrobbler)
 
-plex-lastfm-scrobbler provides a set of scripts that allow you to scrobble played audio items to Last.FM from the Plex Media Server application. plex-lastfm-scrobbler was built to run across platforms, while it has not yet been tested on Windows, it *should* work. 
+plex-lastfm-scrobbler provides a set of scripts that allow you to scrobble played audio items to Last.FM from the Plex Media Server application. plex-lastfm-scrobbler was built to run across platforms, while it has not yet been tested on Windows, it *should* work.
 
 A few points
 
   - plex-lastfm-scrobbler is an out of process tool. Meaning it is not a Plex Media Server plug-in. This tool runs separately of your Plex Media Server.
-  - Must be run on the Plex Media Server 
+  - Must be run on the Plex Media Server
   - Uses python standard library. Python is the only requirement to run this application
   - Parses Plex Media Server logs for the 'got played' string in the log file.
   - Does not differentiate between clients. Meaning all media played, will be scrobbled while the script is running.
@@ -18,7 +18,7 @@ Installation
 
 **Linux, OSX**
 
-It is recommended (but not required) that you install this into a virtualenvironment. 
+It is recommended (but not required) that you install this into a virtualenvironment.
 
 ```
 virtualenv ~/.virtualenvs/plex-lastfm-scrobber
@@ -61,7 +61,7 @@ python setup.py install
 The above command installs the python scripts to various locations. Directories of interest are :
 * c:\Python27\scripts\
 * .config  - this directory is created in your Users home directory (http://en.wikipedia.org/wiki/Home_directory#Default_home_directory_per_operating_system). You will need to modify the configuration file from within this directory and point log locations at the appropriate locations for Plex on windows. You can set the "log_file" property to c:\temp or some other location which you wish to write logs to.
- 
+
 To run the application, do the following from a DOS prompt
 ```
 cd c:\Python27\scripts
@@ -91,10 +91,17 @@ log_file = /tmp/plex_scrobble.log
 cache_location = /tmp/plex_scrobble.cache
 
 # OPTIONAL: mediaserver_log_location references the log file location of the plex media server
-# the default under /var/lib/... is the default install of plex media server on 
+# the default under /var/lib/... is the default install of plex media server on
 # a Linux system. You may wish to change this value to reference your OS install.
 # https://support.plex.tv/hc/en-us/articles/200250417-Plex-Media-Server-Log-Files
 mediaserver_log_location = /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log
+
+# OPTIONAL: plex_token defines the plex token used to get metadata
+# Note: This is required if you use localhost or 127.0.0.1 and Plex Media Server >= 1.1.0
+# You will know if you see a line like this your log_file:
+# [plex_scrobble.plex_monitor fetch_metadata] [ERROR] urllib2 error reading from http://localhost:32400/library/metadata/48080 'HTTP Error 401: Unauthorized'
+# Here is how you can obtain your token https://support.plex.tv/hc/en-us/articles/204059436-Finding-your-account-token-X-Plex-Token
+plex_token = YOUR_PLEX_TOKEN
 ```
 
 Running
@@ -135,14 +142,14 @@ $ nohup plex-scrobble.py &
 Troubleshooting & Known Issues
 -------------
 
-* If you're experiencing authentication issues (appearing in plex_scrobble.log), remove the ~/.config/plex-lastfm-scrobbler/session file. This stores your Last.FM authentication token. There is no harm in removing/recreating this as many times as needed. 
+* If you're experiencing authentication issues (appearing in plex_scrobble.log), remove the ~/.config/plex-lastfm-scrobbler/session file. This stores your Last.FM authentication token. There is no harm in removing/recreating this as many times as needed.
 * If your Plex client supports the universal transcoder (see "Old and Universal transcoder @ https://support.plex.tv/hc/en-us/articles/200250377-Transcoding-Media), tracks will be scrobbled at the start of play. This is due to the way that the universal transcoder writes to the Plex log file. See issue 11 (https://github.com/jesseward/plex-lastfm-scrobbler/issues/11) for background discussion.
 * We've seen instances when Plex Media Server does not report the length of an audio file. This may occur before a full library analyze has completed. When the track length is not reported by the Plex Media Server, the song will not be scrobble. Try forcing the "Analyze" audio library function. Further discussion found in issue #9 https://github.com/jesseward/plex-lastfm-scrobbler/issues/9
 
 Or browse the github issues list to review old bugs or log a new problem.  See https://github.com/jesseward/plex-lastfm-scrobbler/issues?q=
 
 
-Contributing 
+Contributing
 -----------
 Any feedback on the performance on a MS Windows installation would be appreciated. I do not have ability to test plex-lastfm-scrobbler on this platform. Please log an issue or a pull request with any fixes.
 
