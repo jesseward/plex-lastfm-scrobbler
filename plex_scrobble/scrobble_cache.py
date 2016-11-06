@@ -2,7 +2,9 @@ import logging
 import shelve
 import time
 
-from lastfm import LastFm
+import pylast
+
+MAX_CACHE_AGE = 10
 
 
 class ScrobbleCache(object):
@@ -18,9 +20,14 @@ class ScrobbleCache(object):
         """
 
         self.config = config
-        self.cache = shelve.open(self.config.get('plex-scrobble', 'cache_location'),
+        self.cache = shelve.open(self.config['plex-scrobble']['cache_location'],
                 writeback=True)
         self.logger = logging.getLogger(__name__)
+        self.lastfm = pylast.LastFMNetwork(
+			api_key=config['lastfm']['api_key'],
+			api_secret=config['lastfm']['api_secret'],
+			username=config['lastfm']['user_name'],
+			password_hash=pylast.md5(config['lastfm']['password']))
 
     def length(self):
         return len(self.cache)
@@ -48,8 +55,8 @@ class ScrobbleCache(object):
         :param key: a timestamp.
         """
 
-        self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{track}\' ({album})from retry cache.'.format(
-            key=key, artist=self.cache[key][0], track=self.cache[key][1],
+        self.logger.info(u'removing \'{key}\': \'{artist}\' - \'{title}\' ({album})from retry cache.'.format(
+            key=key, artist=self.cache[key][0], title=self.cache[key][1],
             album=self.cache[key][3]))
         del self.cache[key]
         self.cache.sync()
@@ -63,10 +70,10 @@ class ScrobbleCache(object):
         """ debug method to dump cache to stdout. """
 
         for key in self.cache:
-            print u'time={key}, artist={artist}, track={track}, album={album}age={age}'.format(
+            print u'time={key}, artist={artist}, title={title}, album={album}age={age}'.format(
                 
                     key=key, artist=self.cache[key][0], 
-                    track=self.cache[key][1],
+                    title=self.cache[key][1],
                     album=self.cache[key][3],
                     age=self.cache[key][2])
 
@@ -74,14 +81,15 @@ class ScrobbleCache(object):
 
         self.logger.info('Retrying scrobble cache.')
         a = True
-        lastfm = LastFm(self.config)
 
         for key in self.cache:
             # do submissions retry
             try:
-                a = lastfm.scrobble(self.cache[key][0], self.cache[key][1],
-                        self.cache[key][3])
                 self.cache[key][2] += 1
+                a = self.lastfm.scrobble(self.cache[key][0],
+                                    self.cache[key][1],
+                                    timestamp=int(time.time()),
+                                    album=self.cache[key][3])
             except:
                 pass
 
@@ -89,7 +97,7 @@ class ScrobbleCache(object):
             if not a:
                 # remove this record from retry cache, if we're at the retry limit
                 if self.cache[key][2] >= MAX_CACHE_AGE:
-                    self.logger.info(u'MAX_CACHE_AGE for {key} : {artist} - {track}'.format(
+                    self.logger.info(u'MAX_CACHE_AGE for {key} : {artist} - {title}'.format(
                         key, self.cache[key][0], self.key[1]))
                     self.remove(key)
             else:

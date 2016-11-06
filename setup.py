@@ -1,8 +1,8 @@
 import os
-from distutils.core import setup
+from setuptools import setup
 
 NAME = 'plex-lastfm-scrobbler'
-VERSION = '1.3.5'
+VERSION = '2.0.0'
 
 setup(
     name = 'plex_scrobble',
@@ -12,10 +12,15 @@ setup(
     description = ('Scrobble audio tracks played via Plex Media Center'),
     license = 'MIT',
     url = 'https://github.com/jesseward/plex-lastfm-scrobbler',
-    scripts = ['scripts/plex-scrobble.py'],
     packages=['plex_scrobble'],
-    data_files = [(
-      os.path.expanduser('~/.config/{0}'.format(NAME)),
-      ['conf/plex_scrobble.conf'],
-      )]
+    entry_points={
+		'console_scripts': [
+			'plex-scrobble = plex_scrobble.__main__:main'
+	  ]
+    },
+    install_requires=[
+        'click==6.2',
+        'pylast==1.6.0',
+        'toml==0.9.1',
+    ]
 )

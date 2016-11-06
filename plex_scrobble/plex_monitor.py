@@ -1,12 +1,13 @@
-import re
+import logging
 import os
+import re
 import socket
+import time
 import urllib2
 import xml.etree.ElementTree as ET
-import logging
-import time
 
-from lastfm import LastFm
+import pylast
+
 from scrobble_cache import ScrobbleCache
 
 
@@ -40,14 +41,13 @@ def fetch_metadata(l_id, config):
     """ retrieves the metadata information from the Plex media Server api. """
 
     logger = logging.getLogger(__name__)
-    url = '{url}/library/metadata/{l_id}'.format(url=config.get('plex-scrobble',
-      'mediaserver_url'), l_id=l_id)
+    url = '{url}/library/metadata/{l_id}'.format(url=config['plex-scrobble']['mediaserver_url'], l_id=l_id)
     logger.info('Fetching library metadata from {url}'.format(url=url))
 
     req = urllib2.Request(url)
 
-    if config.get('plex-scrobble', 'plex_token'):
-        req.add_header('X-Plex-Token', config.get('plex-scrobble', 'plex_token'))
+    if 'plex_token' in config.get('plex-scrobble', {}):
+        req.add_header('X-Plex-Token', config['plex-scrobble']['plex_token'])
 
     # fail if request is greater than 2 seconds.
     try:
@@ -90,7 +90,7 @@ def fetch_metadata(l_id, config):
                 format(l_id=l_id))
         return False
 
-    return {'track': song, 'artist': artist, 'album': album}
+    return {'title': song, 'artist': artist, 'album': album}
 
 
 def monitor_log(config):
@@ -100,12 +100,22 @@ def monitor_log(config):
     last_played = None
 
     try:
-        f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
+        f = open(config['plex-scrobble']['mediaserver_log_location'])
     except IOError:
-        logger.error('Unable to read log-file {0}. Shutting down.'.format(config.get(
-          'plex-scrobble', 'mediaserver_log_location')))
+        logger.error('Unable to read log-file {0}. Shutting down.'.format(config[
+          'plex-scrobble']['mediaserver_log_location']))
         return
     f.seek(0, 2)
+
+    try:
+        lastfm = pylast.LastFMNetwork(
+            api_key=config['lastfm']['api_key'],
+            api_secret=config['lastfm']['api_secret'],
+            username=config['lastfm']['user_name'],
+            password_hash=pylast.md5(config['lastfm']['password']))
+    except Exception as e:
+        logger.error('FATAL {0}. Aborting execution'.format(e))
+        os._exit(1)
 
     while True:
 
@@ -123,10 +133,10 @@ def monitor_log(config):
             f.close()
 
             try:
-                f = open(config.get('plex-scrobble', 'mediaserver_log_location'))
+                f = open(config['plex-scrobble']['mediaserver_log_location'])
             except IOError:
-                logger.error('Unable to read log-file {0}. Shutting down.'.format(config.get(
-                  'plex-scrobble', 'mediaserver_log_location')))
+                logger.error('Unable to read log-file {0}. Shutting down.'.format(config[
+                  'plex-scrobble']['mediaserver_log_location']))
                 return
 
             f.seek(0, 2)
@@ -152,15 +162,16 @@ def monitor_log(config):
 
             if not metadata: continue
 
-            # submit to last.fm
-            lastfm = LastFm(config)
-            a = lastfm.scrobble(metadata['artist'], metadata['track'],
-                    metadata['album'])
-
-            # scrobble was not successful , add to our retry queue
-            if not a:
+            # submit to last.fm else we add to the retry queue.
+            try:
+                logger.info('Attempting to submit {0}-{1} to last.fm'.format(
+                    metadata['artist'], metadata['title']))
+                lastfm.scrobble(timestamp=int(time.time()), **metadata)
+            except Exception as e:
+                logger.error(u'unable to scrobble {0}, adding to cache. error={1}'.format(
+                    metadata, e))
                 cache = ScrobbleCache(config)
-                cache.add(metadata['artist'], metadata['track'], metadata['album'])
+                cache.add(metadata['artist'], metadata['title'], metadata['album'])
                 cache.close
 
             last_played = played
