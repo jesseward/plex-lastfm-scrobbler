@@ -23,11 +23,6 @@ class ScrobbleCache(object):
         self.cache = shelve.open(self.config['plex-scrobble']['cache_location'],
                 writeback=True)
         self.logger = logging.getLogger(__name__)
-        self.lastfm = pylast.LastFMNetwork(
-			api_key=config['lastfm']['api_key'],
-			api_secret=config['lastfm']['api_secret'],
-			username=config['lastfm']['user_name'],
-			password_hash=pylast.md5(config['lastfm']['password']))
 
     def length(self):
         return len(self.cache)
@@ -86,7 +81,12 @@ class ScrobbleCache(object):
             # do submissions retry
             try:
                 self.cache[key][2] += 1
-                a = self.lastfm.scrobble(self.cache[key][0],
+                lastfm = pylast.LastFMNetwork(
+                    api_key=config['lastfm']['api_key'],
+                    api_secret=config['lastfm']['api_secret'],
+                    username=config['lastfm']['user_name'],
+                    password_hash=pylast.md5(config['lastfm']['password']))
+                a = lastfm.scrobble(self.cache[key][0],
                                     self.cache[key][1],
                                     timestamp=int(time.time()),
                                     album=self.cache[key][3])

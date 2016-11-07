@@ -18,12 +18,11 @@ class TestScrobbleCache(unittest.TestCase):
     def tearDown(self):
         """ clean up/remove our temporary cache after test run completes. """
 
-        if os.path.isfile(config.get('plex-scrobble',
-            'cache_location')):
-            remove(config.get('plex-scrobble', 'cache_location'))
+        if os.path.isfile(config['plex-scrobble']['cache_location']):
+            remove(config['plex-scrobble']['cache_location'])
 
     def test_add_record_to_cache(self):
-        self.sc.add('artist', 'track', 'album')
+        self.sc.add('artist', 'title', 'album')
 
         self.assertTrue(self.sc.length() == 1)
 

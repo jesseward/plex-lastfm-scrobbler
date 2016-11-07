@@ -1,0 +1,10 @@
+[lastfm]
+api_key = "travis"
+password = "travis"
+user_name = "travis"
+api_secret = "travis"
+[plex-scrobble]
+mediaserver_url = "http://localhost:32400"
+log_file = "/tmp/_plex_scrobble.log"
+cache_location = "/tmp/_plex_scrobble.cache"
+mediaserver_log_location = "/tmp/_plex.log"
