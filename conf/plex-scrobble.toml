@@ -1,0 +1,35 @@
+# SAMPLE ONLY
+[lastfm]
+# REQUIRED: You'll need to create a last.fm API application first. Do so here:
+# http://www.last.fm/api/account/create
+api_key = "YOUR_API_KEY"
+api_secret = "YOUR_API_SECRET"
+user_name = "LAST_FM_USERNAME"
+password = "LAST_FM_PASSWORD"
+
+[plex-scrobble]
+# mediaserver_log_location references the log file location of the plex media server
+# the default under /var/lib/... is the default install of plex media server on
+# a Linux system. You may wish to change this value to reference your OS install.
+# https://support.plex.tv/hc/en-us/articles/200250417-Plex-Media-Server-Log-Files
+mediaserver_log_location = "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs/Plex Media Server.log"
+
+# REQUIRED: Where do you wish to write the plex-scrobble log file.
+log_file = "/tmp/plex-scrobble.log"
+
+# REQUIRED: mediaserver_url is the location of the http service exposed by Plex Media Server
+# the default values should be 'ok', assuming you're running the plex scrobble
+# script from the same server as your plex media server
+mediaserver_url = "http://localhost:32400"
+
+# REQUIRED: a python data struture that stores failed scrobbles. plex-scrobble
+# will retry on a 60 minute interval, maximum of 10 attempts if last.fm is
+# experiencing issues.
+cache_location = "/tmp/plex_scrobble.cache"
+
+# OPTIONAL: plex_token defines the plex token used to get metadata
+# Note: This is required if you use localhost or 127.0.0.1 and Plex Media Server >= 1.1.0
+# You will know if you see a line like this your log_file:
+# [plex_scrobble.plex_monitor fetch_metadata] [ERROR] urllib2 error reading from http://localhost:32400/library/metadata/48080 'HTTP Error 401: Unauthorized'
+# Here is how you can obtain your token https://support.plex.tv/hc/en-us/articles/204059436-Finding-your-account-token-X-Plex-Token
+plex_token = "YOUR_PLEX_TOKEN"

@@ -1,4 +1,3 @@
-import ConfigParser
+import toml
 
-config = ConfigParser.ConfigParser()
-config.read('plex_scrobble.conf')
+config = toml.load('plex-scrobble.toml')
