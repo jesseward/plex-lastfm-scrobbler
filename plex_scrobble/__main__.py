@@ -39,9 +39,16 @@ def cache_retry(config, logger):
 
     retry = 3600
     logger.info('starting cache_retry thread.')
+    user_name = config['lastfm']['user_name']
+    password = config['lastfm']['password']
+    api_key = config['lastfm']['api_key']
+    api_secret = config['lastfm']['api_secret']
+    cache_location = config['plex-scrobble']['cache_location']
+
     while True:
         try:
-            cache = ScrobbleCache(config)
+            cache = ScrobbleCache(api_key, api_secret, user_name, password,
+                                  cache_location=cache_location)
         except Exception as e:
             logger.warn('ERROR: {0}, retrying in {1} seconds'.format(e, retry))
             time.sleep(retry)
