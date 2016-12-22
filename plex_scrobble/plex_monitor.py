@@ -96,6 +96,12 @@ def monitor_log(config):
     st_mtime = False
     last_played = None
 
+    user_name = config['lastfm']['user_name']
+    password = config['lastfm']['password']
+    api_key = config['lastfm']['api_key']
+    api_secret = config['lastfm']['api_secret']
+    cache_location = config['plex-scrobble']['cache_location']
+
     try:
         f = open(config['plex-scrobble']['mediaserver_log_location'])
     except IOError:
@@ -164,13 +170,14 @@ def monitor_log(config):
 
             # submit to last.fm else we add to the retry queue.
             try:
-                logger.info('Attempting to submit {0}-{1} to last.fm'.format(
-                    metadata['artist'], metadata['title']))
+                logger.info('Attempting to submit {0} - {1} to last.fm'.format(
+                            metadata['artist'], metadata['title']))
                 lastfm.scrobble(timestamp=int(time.time()), **metadata)
             except Exception as e:
                 logger.error(u'unable to scrobble {0}, adding to cache. error={1}'.format(
                     metadata, e))
-                cache = ScrobbleCache(config)
+                cache = ScrobbleCache(api_key, api_secret, user_name, password,
+                                      cache_location=cache_location)
                 cache.add(metadata['artist'], metadata['title'], metadata['album'])
                 cache.close
 
