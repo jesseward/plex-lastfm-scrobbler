@@ -1,14 +1,14 @@
+# -*- coding: utf-8 -*-
 import logging
 import os
 import re
-import socket
 import time
-import urllib2
 import xml.etree.ElementTree as ET
 
+import requests
 import pylast
 
-from scrobble_cache import ScrobbleCache
+from .scrobble_cache import ScrobbleCache
 
 
 def parse_line(log_line):
@@ -44,29 +44,26 @@ def fetch_metadata(l_id, config):
     url = '{url}/library/metadata/{l_id}'.format(url=config['plex-scrobble']['mediaserver_url'], l_id=l_id)
     logger.info('Fetching library metadata from {url}'.format(url=url))
 
-    req = urllib2.Request(url)
+    headers = None
 
     if 'plex_token' in config.get('plex-scrobble', {}):
-        req.add_header('X-Plex-Token', config['plex-scrobble']['plex_token'])
+        headers = {'X-Plex-Token': config['plex-scrobble']['plex_token']}
 
     # fail if request is greater than 2 seconds.
     try:
-        metadata = urllib2.urlopen(req, timeout=2)
-    except urllib2.URLError, e:
+        metadata = requests.get(url, headers=headers)
+    except requests.exceptions.RequestException as e:
         logger.error('urllib2 error reading from {url} \'{error}\''.format(url=url,
-                      error=e))
-        return False
-    except socket.timeout, e:
-        logger.error('Timeout reading from {url} \'{error}\''.format(url=url, error=e))
+                     error=e))
         return False
 
-    tree = ET.fromstring(metadata.read())
+    tree = ET.fromstring(metadata.text)
     track = tree.find('Track')
 
     # BUGFIX: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
     if track is None:
         logger.info('Ignoring played item library-id={l_id}, could not determine audio library information.'.
-                format(l_id=l_id))
+                    format(l_id=l_id))
         return False
 
     # if present use originalTitle. This appears to be set if
@@ -87,7 +84,7 @@ def fetch_metadata(l_id, config):
 
     if not all((artist, song)):
         logger.warn('unable to retrieve meatadata keys for libary-id={l_id}'.
-                format(l_id=l_id))
+                    format(l_id=l_id))
         return False
 
     return {'title': song, 'artist': artist, 'album': album}
@@ -98,6 +95,12 @@ def monitor_log(config):
     logger = logging.getLogger(__name__)
     st_mtime = False
     last_played = None
+
+    user_name = config['lastfm']['user_name']
+    password = config['lastfm']['password']
+    api_key = config['lastfm']['api_key']
+    api_secret = config['lastfm']['api_secret']
+    cache_location = config['plex-scrobble']['cache_location']
 
     try:
         f = open(config['plex-scrobble']['mediaserver_log_location'])
@@ -126,10 +129,11 @@ def monitor_log(config):
         # the log file i/o rotation detection cross-platform.
         if int(time.time()) - int(os.fstat(f.fileno()).st_mtime) >= 60:
 
-            if int(os.fstat(f.fileno()).st_mtime) == st_mtime: continue
+            if int(os.fstat(f.fileno()).st_mtime) == st_mtime:
+                continue
 
             logger.debug('Possible log file rotation, resetting file handle (st_mtime={mtime})'.format(
-                mtime=time.ctime(os.fstat(f.fileno()).st_mtime) ))
+                mtime=time.ctime(os.fstat(f.fileno()).st_mtime)))
             f.close()
 
             try:
@@ -150,7 +154,8 @@ def monitor_log(config):
         if line:
             played = parse_line(line)
 
-            if not played: continue
+            if not played:
+                continue
 
             # when playing via a client, log lines are duplicated (seen via iOS)
             # this skips dupes. Note: will also miss songs that have been repeated
@@ -160,17 +165,19 @@ def monitor_log(config):
 
             metadata = fetch_metadata(played, config)
 
-            if not metadata: continue
+            if not metadata:
+                continue
 
             # submit to last.fm else we add to the retry queue.
             try:
-                logger.info('Attempting to submit {0}-{1} to last.fm'.format(
-                    metadata['artist'], metadata['title']))
+                logger.info('Attempting to submit {0} - {1} to last.fm'.format(
+                            metadata['artist'], metadata['title']))
                 lastfm.scrobble(timestamp=int(time.time()), **metadata)
             except Exception as e:
                 logger.error(u'unable to scrobble {0}, adding to cache. error={1}'.format(
                     metadata, e))
-                cache = ScrobbleCache(config)
+                cache = ScrobbleCache(api_key, api_secret, user_name, password,
+                                      cache_location=cache_location)
                 cache.add(metadata['artist'], metadata['title'], metadata['album'])
                 cache.close
 

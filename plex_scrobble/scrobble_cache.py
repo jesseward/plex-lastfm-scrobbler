@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 import shelve
 import time
@@ -71,11 +72,11 @@ class ScrobbleCache(object):
         """ debug method to dump cache to stdout. """
 
         for key in self.cache:
-            print'time={key}, artist={artist}, title={title}, album={album}age={age}'.format(
+            print('time={key}, artist={artist}, title={title}, album={album}age={age}'.format(
                     key=key, artist=self.cache[key][0],
                     title=self.cache[key][1],
                     album=self.cache[key][3],
-                    age=self.cache[key][2])
+                    age=self.cache[key][2]))
 
     def retry_queue(self):
 
@@ -91,9 +92,9 @@ class ScrobbleCache(object):
                     username=self.user_name,
                     password_hash=pylast.md5(self.password))
                 lastfm.scrobble(self.cache[key][0],
-                                    self.cache[key][1],
-                                    timestamp=int(time.time()),
-                                    album=self.cache[key][3])
+                                self.cache[key][1],
+                                timestamp=int(time.time()),
+                                album=self.cache[key][3])
             except:
                 self.logger.warn('Failed to resubmit artist={artist}, title={title}, album={album}age={age}'.format(
                     artist=self.cache[key][0],
