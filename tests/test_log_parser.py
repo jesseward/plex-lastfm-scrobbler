@@ -1,8 +1,8 @@
+import logging
 import unittest
 
 from plex_scrobble.plex_monitor import parse_line
 
-import logging
 logging.disable(logging.CRITICAL)
 
 

@@ -1,3 +1,4 @@
+import logging
 import os.path
 import unittest
 from os import remove
@@ -5,7 +6,6 @@ from os import remove
 from config import config
 from plex_scrobble.scrobble_cache import ScrobbleCache
 
-import logging
 logging.disable(logging.CRITICAL)
 
 
