@@ -20,7 +20,7 @@ class TestScrobbleCache(unittest.TestCase):
         """ create an empty scrobble_cache object. """
         user_name = password = api_key = api_secret = config['lastfm']['user_name']
         self.sc = ScrobbleCache(api_key, api_secret, user_name, password,
-				cache_location=config['plex-scrobble']['cache_location'])
+                                cache_location=config['plex-scrobble']['cache_location'])
         self._clean_file()
 
     def tearDown(self):
@@ -38,6 +38,7 @@ class TestScrobbleCache(unittest.TestCase):
         for key in self.sc.cache:
             self.sc.remove(key)
         self.assertTrue(self.sc.length() == 0)
+
 
 if __name__ == '__main__':
     unittest.main()

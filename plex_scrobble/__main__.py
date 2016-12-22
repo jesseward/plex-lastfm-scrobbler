@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 import sys
 import platform
@@ -11,7 +12,7 @@ import toml
 
 from plex_scrobble.plex_monitor import monitor_log
 from plex_scrobble.scrobble_cache import ScrobbleCache
-from plex_scrobble.pre_check import PLSSanity
+
 
 def platform_log_directory():
     """
@@ -60,6 +61,7 @@ def cache_retry(config, logger):
         cache.close()
         time.sleep(retry)
 
+
 def loop(config, logger):
     """
     The main thread loop
@@ -93,8 +95,8 @@ def load_config(path):
     for k in ['api_key', 'api_secret', 'user_name', 'password']:
         assert k in config['lastfm'], 'Missing required lastfm option: {0}'.format(k)
 
-	for k in ['mediaserver_url', 'cache_location', 'log_file']:
-		assert k in config['plex-scrobble'], 'Missing required plex-scrobble option: {0}'.format(k)
+    for k in ['mediaserver_url', 'cache_location', 'log_file']:
+        assert k in config['plex-scrobble'], 'Missing required plex-scrobble option: {0}'.format(k)
 
     return config
 
@@ -124,9 +126,9 @@ Key and Shared Secret.
     }
 
     config['plex-scrobble'] = {
-		key: click.prompt(key, default=plex_scrobble[key])
-		for key in plex_scrobble.keys()
-	}
+        key: click.prompt(key, default=plex_scrobble[key])
+        for key in list(plex_scrobble.keys())
+    }
 
     generated = toml.dumps(config)
     click.echo('Generated config:\n\n%s' % generated)
@@ -135,13 +137,12 @@ Key and Shared Secret.
         with open(os.path.expanduser('~/.plex-scrobble.toml'), 'w') as fp:
             fp.write(generated)
 
+
 @click.command()
 @click.option('--config-file', required=False,
               help='The location to the configuration file.')
-@click.option('--precheck', is_flag=True,
-              help='Run a pre-check to ensure a correctly configured system.')
 @click.option('--wizard', is_flag=True, help='Generate a config file.')
-def main(config_file, precheck, wizard):
+def main(config_file, wizard):
 
     if wizard:
         return config_wizard()
@@ -154,18 +155,13 @@ def main(config_file, precheck, wizard):
         click.secho('Config file not found!\n\nUse --wizard to create a config', fg='red')
         sys.exit(1)
 
-    if precheck:
-        pc = PLSSanity(config)
-        pc.run()
-        click.secho('Precheck completed. Exiting.', fg='green')
-        sys.exit(0)
-
     FORMAT = '%(asctime)-15s [%(process)d] [%(name)s %(funcName)s] [%(levelname)s] %(message)s'
     logging.basicConfig(filename=config['plex-scrobble']['log_file'],
-      format=FORMAT, level=logging.DEBUG)
+                        format=FORMAT, level=logging.DEBUG)
     logger = logging.getLogger('main')
 
-    m = loop(config, logger)
+    loop(config, logger)
+
 
 if __name__ == '__main__':
     sys.exit(main())

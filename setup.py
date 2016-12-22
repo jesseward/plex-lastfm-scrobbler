@@ -19,8 +19,9 @@ setup(
 	  ]
     },
     install_requires=[
-        'click==6.2',
-        'pylast==1.6.0',
-        'toml==0.9.1',
+        'click>=6.2',
+        'pylast>=1.6.0',
+        'toml>=0.9.1',
+        'requests>=2.12.0',
     ]
 )
