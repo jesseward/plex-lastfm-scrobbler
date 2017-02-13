@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import io
 import logging
 import os
 import re
@@ -33,7 +34,7 @@ def parse_line(log_line):
         m = regex.match(log_line)
 
         if m:
-            logger.info('Found played song and extracted library id \'{l_id}\' from plex log '.format(l_id=m.group(1)))
+            logger.info('Found played song and extracted library id "{l_id}" from plex log '.format(l_id=m.group(1)))
             return m.group(1)
 
 
@@ -51,13 +52,12 @@ def fetch_metadata(l_id, config):
 
     # fail if request is greater than 2 seconds.
     try:
-        metadata = requests.get(url, headers=headers)
+        metadata = requests.get(url, headers=headers).text
     except requests.exceptions.RequestException as e:
-        logger.error('urllib2 error reading from {url} \'{error}\''.format(url=url,
-                     error=e))
+        logger.error('error reading from {url} "{error}"'.format(url=url, error=e))
         return False
 
-    tree = ET.fromstring(metadata.text)
+    tree = ET.fromstring(metadata)
     track = tree.find('Track')
 
     # BUGFIX: https://github.com/jesseward/plex-lastfm-scrobbler/issues/7
@@ -78,16 +78,16 @@ def fetch_metadata(l_id, config):
     # add support for fetching album metadata from the track object.
     album = track.get('parentTitle')
     if not album:
-        logger.warn('unable to locate album name for ibary-id={l_id}'.format(
+        logger.warning('unable to locate album name for ibary-id={l_id}'.format(
             l_id=l_id))
         album = None
 
     if not all((artist, song)):
-        logger.warn('unable to retrieve meatadata keys for libary-id={l_id}'.
-                    format(l_id=l_id))
+        logger.warning('unable to retrieve meatadata keys for libary-id={l_id}'.
+                       format(l_id=l_id))
         return False
 
-    return {'title': song, 'artist': artist, 'album': album}
+    return {'title': song.encode('utf-8'), 'artist': artist.encode('utf-8'), 'album': album.encode('utf-8')}
 
 
 def monitor_log(config):
@@ -103,7 +103,7 @@ def monitor_log(config):
     cache_location = config['plex-scrobble']['cache_location']
 
     try:
-        f = open(config['plex-scrobble']['mediaserver_log_location'])
+        f = io.open(config['plex-scrobble']['mediaserver_log_location'], 'r', encoding='utf-8')
     except IOError:
         logger.error('Unable to read log-file {0}. Shutting down.'.format(config[
           'plex-scrobble']['mediaserver_log_location']))
@@ -112,10 +112,10 @@ def monitor_log(config):
 
     try:
         lastfm = pylast.LastFMNetwork(
-            api_key=config['lastfm']['api_key'],
-            api_secret=config['lastfm']['api_secret'],
-            username=config['lastfm']['user_name'],
-            password_hash=pylast.md5(config['lastfm']['password']))
+            api_key=api_key,
+            api_secret=api_secret,
+            username=user_name,
+            password_hash=pylast.md5(password))
     except Exception as e:
         logger.error('FATAL {0}. Aborting execution'.format(e))
         os._exit(1)
@@ -160,7 +160,7 @@ def monitor_log(config):
             # when playing via a client, log lines are duplicated (seen via iOS)
             # this skips dupes. Note: will also miss songs that have been repeated
             if played == last_played:
-                logger.warn('Dupe detection : {0}, not submitting'.format(last_played))
+                logger.warning('Dupe detection : {0}, not submitting'.format(last_played))
                 continue
 
             metadata = fetch_metadata(played, config)

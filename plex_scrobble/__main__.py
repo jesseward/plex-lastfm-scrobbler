@@ -51,14 +51,13 @@ def cache_retry(config, logger):
             cache = ScrobbleCache(api_key, api_secret, user_name, password,
                                   cache_location=cache_location)
         except Exception as e:
-            logger.warn('ERROR: {0}, retrying in {1} seconds'.format(e, retry))
+            logger.warning('ERROR: {0}, retrying in {1} seconds'.format(e, retry))
             time.sleep(retry)
             continue
         # do not retry if cache is empty.
         if cache.length() > 0:
             cache.retry_queue()
 
-        cache.close()
         time.sleep(retry)
 
 

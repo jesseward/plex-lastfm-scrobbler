@@ -1,12 +1,19 @@
+# -*- coding: utf-8 -*-
 import logging
 import os.path
+import six
+import sys
 import unittest
 from os import remove
 
 from config import config
 from plex_scrobble.scrobble_cache import ScrobbleCache
 
-logging.disable(logging.CRITICAL)
+# forcing to ASCII in Python 2 to ensure clients running in something 
+# other than a UTF8 enabled shell are working.
+if sys.version[0] == '2':
+    reload(sys)
+    sys.setdefaultencoding("ascii")
 
 
 class TestScrobbleCache(unittest.TestCase):
@@ -21,6 +28,9 @@ class TestScrobbleCache(unittest.TestCase):
         user_name = password = api_key = api_secret = config['lastfm']['user_name']
         self.sc = ScrobbleCache(api_key, api_secret, user_name, password,
                                 cache_location=config['plex-scrobble']['cache_location'])
+        self.album = six.u('Björk').encode('utf-8')
+        self.artist = six.u('CR∑∑KS').encode('utf-8')
+        self.title = six.u('deep burnt').encode('utf-8')
         self._clean_file()
 
     def tearDown(self):
@@ -29,7 +39,7 @@ class TestScrobbleCache(unittest.TestCase):
 
     def test_add_record_to_cache(self):
         """ tests the addition of a test item to the cache. """
-        self.sc.add('artist', 'title', 'album')
+        self.sc.add(self.artist, self.title, self.album)
 
         self.assertTrue(self.sc.length() == 1)
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaContainer size="1" allowSync="1" identifier="com.plexapp.plugins.library" librarySectionID="2" librarySectionTitle="Music" librarySectionUUID="aaaaaaaa-1234-aaaa-aaaa-123451234512" mediaTagPrefix="/system/bundle/media/flags/" mediaTagVersion="1486068602">
+<Track ratingKey="538" key="/library/metadata/538" parentRatingKey="537" grandparentRatingKey="524" guid="com.plexapp.agents.plexmusic://gracenote/track/431995094-D73A524D5EE92E857CCCDB331E0911D0/444891092-70D20C5F59D82102B7B91FCD4A41E1C6?lang=en" librarySectionID="2" type="track" title="daze" grandparentKey="/library/metadata/524" parentKey="/library/metadata/537" grandparentTitle="&#12376;&#12435;(&#33258;&#28982;&#12398;&#25973;P)" parentTitle="daze / days" originalTitle="&#12376;&#12435; Feat. &#12513;&#12452;&#12522;&#12450;" summary="" index="1" parentIndex="1" viewCount="1" lastViewedAt="1486331020" year="2014" thumb="/library/metadata/537/thumb/1486266973" parentThumb="/library/metadata/537/thumb/1486266973" grandparentThumb="/library/metadata/524/thumb/1486266954" duration="235502" addedAt="1486266669" updatedAt="1486266973">
+<Media id="438" duration="235502" bitrate="4621" audioChannels="2" audioCodec="flac" container="flac">
+<Part id="438" key="/library/parts/438/1486266413/file.flac" duration="235502" file="/path/to/file/01. daze.flac" size="136024317" container="flac">
+<Stream id="766" streamType="2" selected="1" codec="flac" index="0" channels="2" bitrate="4621" audioChannelLayout="stereo" bitDepth="24" samplingRate="96000" />
+</Part>
+</Media>
+</Track>
+</MediaContainer>
