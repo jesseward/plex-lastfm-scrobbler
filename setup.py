@@ -23,6 +23,5 @@ setup(
         'pylast>=1.6.0',
         'toml>=0.9.1',
         'requests>=2.12.0',
-        'mock>=2.0.0',
     ]
 )

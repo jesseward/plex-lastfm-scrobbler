@@ -3,7 +3,7 @@ python:
     - "2.7"
     - "3.5"
 install:
-    pip install .
+    - pip install .
+    - pip install -r dev_requirements.txt
 script:
-    - cd tests && python test_cache.py
-    - python test_log_parser.py
+    - cd tests && python -m unittest discover
