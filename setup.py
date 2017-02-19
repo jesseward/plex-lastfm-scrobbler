@@ -2,7 +2,7 @@ import io
 from setuptools import setup
 
 NAME = 'plex-lastfm-scrobbler'
-VERSION = '4.1.0'
+VERSION = '4.1.1'
 
 description = 'Scrobble audio tracks played via Plex Media Center'
 try:

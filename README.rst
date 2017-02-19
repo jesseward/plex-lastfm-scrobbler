@@ -34,8 +34,7 @@ virtualenvironment. This can be done as such.
     source ~/.virtualenvs/plex-lastfm-scrobbler/bin/activate
 
 Installing via ``pip`` or ``easy_install`` is supported. For example
-:``pip install plex-lastfm-scrobbler`` or
-``easy_install plex-lastfm-scrobbler``.
+:``pip install plex-scrobble`` or ``easy_install plex-scrobble``.
 
 If you wish to run development builds, fetch and install the source from
 the github repo.
