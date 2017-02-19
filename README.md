@@ -17,19 +17,21 @@ Installation
 
 **Linux, OSX**
 
-It is recommended (but not required) that you install this into a virtualenvironment.
+It is recommended (but not required) that you install this into a virtualenvironment. This can be done as such.
 
 ```
-virtualenv ~/.virtualenvs/plex-lastfm-scrobber
-source ~/.virtualenvs/plex-lastfm-scrobber/bin/activate
+virtualenv ~/.virtualenvs/plex-lastfm-scrobbler
+source ~/.virtualenvs/plex-lastfm-scrobbler/bin/activate
 ```
 
-Fetch and install the source from the github repo.
+Installing via `pip` or `easy_install` is supported. For example :`pip install plex-lastfm-scrobbler` or `easy_install plex-lastfm-scrobbler`.
+
+If you wish to run development builds, fetch and install the source from the github repo.
 ```
 git clone https://github.com/jesseward/plex-lastfm-scrobbler.git
 cd plex-lastfm-scrobbler
 python setup.py install
-
+pip install -r dev_requirements.txt # for mock/testing packages.
 ```
 
 Alternatively, you can fetch the latest zip from github

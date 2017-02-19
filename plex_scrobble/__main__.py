@@ -126,7 +126,7 @@ Key and Shared Secret.
 
     config['plex-scrobble'] = {
         key: click.prompt(key, default=plex_scrobble[key])
-        for key in list(plex_scrobble.keys())
+        for key in plex_scrobble
     }
 
     generated = toml.dumps(config)

@@ -49,7 +49,6 @@ class ScrobbleCache(object):
             os.rename(self.cache_location, self.cache_location + '.old')
             self.sync()
 
-
     def length(self):
         return len(self.cache)
 
@@ -118,7 +117,7 @@ class ScrobbleCache(object):
 
         self.logger.info('Retrying scrobble cache.')
 
-        for key in self.cache.keys():
+        for key in self.cache:
             # do submissions retry
             try:
                 self.cache[key][2] += 1
