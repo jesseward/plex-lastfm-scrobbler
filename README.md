@@ -2,6 +2,10 @@ plex-lastfm-scrobbler
 =====================
 [![Build Status](https://api.travis-ci.org/jesseward/plex-lastfm-scrobbler.svg?branch=master)](https://api.travis-ci.org/jesseward/plex-lastfm-scrobbler)
 
+*NOTE* : If you're a plex.tv user, Plex includes its own internal scrobbling capabilities. In order to enable your Plex.Tv account for Last.FM integration browse to https://plex.tv/users/edit and link your last.fm account from the `Social Media` . Announcment was made public via https://www.plex.tv/blog/plex-media-server-v0-9-12-5-a-tasty-update/ .
+
+
+
 plex-lastfm-scrobbler provides a set of scripts that allow you to scrobble played audio items to Last.FM from the Plex Media Server application. plex-lastfm-scrobbler was built to run across platforms, though only tested on Linux.
 
 A few points
