@@ -104,7 +104,7 @@ Running
 If you installed plex-lastfm-scrobble to a virtual environment, enable the virtual env.
 
 ```
-source ~/.virtualenvs/plex-lastfm-scrobber/bin/activate
+source ~/.virtualenvs/plex-lastfm-scrobbler/bin/activate
 ```
 
 run the application
